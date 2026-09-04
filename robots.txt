@@ -1,2 +1,21 @@
+# Mac dinh: cam moi bo tim kiem
 User-agent: *
 Disallow: /
+
+# Ngoai le: cho phep bo doc the xem truoc cua mang xa hoi,
+# de link dan vao Facebook / Messenger / Zalo / Telegram hien duoc the OG.
+# Nhung bo nay chi doc the, khong dua trang vao ket qua tim kiem.
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Zalo
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
