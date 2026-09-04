@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="description" content="Bản dùng nội bộ. Theo dõi tiến độ 07 cơ sở dữ liệu của Bộ Văn hóa, Thể thao và Du lịch theo Nghị quyết 11/NQ-CP, đồng bộ từ 8 kỳ báo cáo tuần (17/7 - 28/8/2026).">
+<style>
+:root{color-scheme:light}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Chuyên trang CSDL Nghị quyết 11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lora:ital,wght@0,500;1,400;1,500&family=IBM+Plex+Mono:wght@500;600&display=swap">
+
+<style>
+:root{
+  --ground:#EFF2F6; --surface:#FFFFFF; --surface-2:#F6F8FB; --surface-3:#E8EDF4;
+  --ink:#0F1722; --ink-2:#46536A; --ink-3:#7A8699;
+  --line:#DBE1EB; --line-2:#C0CAD9;
+  --navy:#0B3D91; --navy-d:#082C69; --navy-l:#2A63C4;
+  --gold:#9E6F08; --gold-soft:#F5EBD2;
+  --ok:#136B3A; --ok-soft:#E1F1E7;
+  --warn:#A96406; --warn-soft:#FAEEDC;
+  --bad:#AB1420; --bad-soft:#FBE5E7;
+  --ff:"Be Vietnam Pro",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --fs:"Lora",Georgia,"Times New Roman",serif;
+  --fm:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --sh:0 1px 2px rgba(11,45,105,.06),0 2px 8px rgba(11,45,105,.05);
+  --sh-lift:0 2px 6px rgba(11,45,105,.09),0 12px 28px rgba(11,45,105,.10);
+  --maxw:1280px;
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--ff);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+h1,h2,h3,h4{margin:0;text-wrap:balance;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--fm);font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--navy-l);outline-offset:2px;border-radius:3px}
+
+/* ---------- HEADER ---------- */
+header.site{background:var(--navy-d);color:#F2F6FD;position:sticky;top:0;z-index:50;border-bottom:3px solid var(--gold)}
+.hd{display:flex;align-items:center;gap:18px;padding:14px 0;flex-wrap:wrap}
+.seal{width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:radial-gradient(circle at 50% 38%,#FFE7A8,#B8860B 70%);display:flex;align-items:center;justify-content:center;color:#5A3F00;font-weight:800;font-size:15px;box-shadow:0 0 0 3px rgba(255,255,255,.16)}
+.hd .id{min-width:0}
+.hd .id .org{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#9DB8E4;font-weight:600}
+.hd .id h1{font-size:17px;line-height:1.3;color:#fff;font-weight:700;margin-top:1px}
+.hd .spacer{margin-left:auto}
+.periodbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.periodbar label{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:#9DB8E4;font-weight:600}
+select#periodSel{font-family:var(--ff);font-size:13px;font-weight:600;color:#fff;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.34);border-radius:6px;padding:8px 11px;cursor:pointer;max-width:340px}
+select#periodSel option{color:#111;background:#fff}
+.navstep{display:flex;gap:4px}
+.navstep button{font-family:var(--ff);font-size:14px;font-weight:700;line-height:1;color:#fff;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.34);border-radius:6px;padding:9px 12px;cursor:pointer}
+.navstep button:hover:not(:disabled){background:rgba(255,255,255,.26)}
+.navstep button:disabled{opacity:.32;cursor:not-allowed}
+nav.tabs{background:rgba(0,0,0,.22);border-top:1px solid rgba(255,255,255,.09)}
+nav.tabs .wrap{display:flex;gap:0;overflow-x:auto}
+nav.tabs a{white-space:nowrap;padding:11px 16px;font-size:12.5px;font-weight:600;color:#BFD1EE;text-decoration:none;border-bottom:2px solid transparent}
+nav.tabs a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.4)}
+
+/* ---------- PERIOD RIBBON ---------- */
+.ribbon{background:var(--surface);border-bottom:1px solid var(--line)}
+.ribbon .wrap{display:flex;align-items:baseline;gap:8px 22px;padding-top:13px;padding-bottom:13px;flex-wrap:wrap}
+.ribbon .kname{font-size:16px;font-weight:700}
+.ribbon .krange{font-size:13px;color:var(--ink-2)}
+.ribbon .ksrc{font-size:12px;color:var(--ink-3);margin-left:auto;font-style:italic;font-family:var(--fs)}
+
+/* ---------- SECTION ---------- */
+section{padding:34px 0}
+section.alt{background:var(--surface-2);border-block:1px solid var(--line)}
+.shead{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.shead h2{font-size:20px;color:var(--ink)}
+.shead .rule{flex:1;height:1px;background:var(--line-2);min-width:20px}
+.shead .hint{font-size:12px;color:var(--ink-3);font-weight:500}
+
+/* ---------- LEAD ---------- */
+.lead{display:grid;grid-template-columns:1.55fr 1fr;gap:26px;align-items:start}
+@media (max-width:900px){.lead{grid-template-columns:1fr}}
+.lead .body{font-size:15px;color:var(--ink-2);max-width:64ch}
+.lead .body b{color:var(--ink);font-weight:600}
+.lead .body p+p{margin-top:12px}
+.basis{border-left:3px solid var(--gold);padding:2px 0 2px 16px;font-family:var(--fs);font-size:13.5px;line-height:1.7;color:var(--ink-2)}
+.basis b{font-family:var(--ff);font-weight:600;color:var(--ink)}
+.basis .lbl{display:block;font-family:var(--ff);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px;font-style:normal}
+
+/* ---------- KPI ---------- */
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:24px}
+@media (max-width:1000px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.kpis{grid-template-columns:1fr}}
+.kpi{background:var(--surface);padding:16px 17px}
+.kpi .n{font-family:var(--fm);font-size:27px;font-weight:600;line-height:1.05;letter-spacing:-.02em}
+.kpi .n small{font-size:14px;font-weight:500;color:var(--ink-3)}
+.kpi .l{font-size:12.5px;font-weight:600;margin-top:7px;color:var(--ink)}
+.kpi .s{font-size:11.5px;color:var(--ink-3);margin-top:2px;line-height:1.45}
+.t-ok{color:var(--ok)} .t-warn{color:var(--warn)} .t-bad{color:var(--bad)} .t-navy{color:var(--navy)} .t-gold{color:var(--gold)}
+
+/* ---------- GROUP ---------- */
+.grp{margin-bottom:26px}
+.grp-h{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:8px;margin-bottom:14px;background:var(--surface-3)}
+.grp-h .tagn{font-family:var(--fm);font-size:11px;font-weight:600;letter-spacing:.06em;padding:3px 8px;border-radius:4px;background:var(--navy);color:#fff}
+.grp-h .gt{font-size:13.5px;font-weight:700}
+.grp-h .gd{font-size:12px;color:var(--ink-2);margin-left:auto;text-align:right}
+
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media (max-width:980px){.cards{grid-template-columns:1fr}}
+.c{background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--sh);display:flex;flex-direction:column;overflow:hidden}
+.c.sev-bad{border-left:4px solid var(--bad)}
+.c.sev-warn{border-left:4px solid var(--warn)}
+.c.sev-ok{border-left:4px solid var(--ok)}
+.c-h{padding:14px 17px 12px;display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--line)}
+.c-h .nm{flex:1;min-width:0}
+.c-h .nm .t{font-size:15px;font-weight:700;line-height:1.35}
+.c-h .nm .u{font-size:12px;color:var(--ink-3);margin-top:3px}
+.pill{font-size:11px;font-weight:700;padding:4px 9px;border-radius:20px;white-space:nowrap;flex:none}
+.p-ok{background:var(--ok-soft);color:var(--ok)}
+.p-warn{background:var(--warn-soft);color:var(--warn)}
+.p-bad{background:var(--bad-soft);color:var(--bad)}
+.c-b{padding:14px 17px;flex:1;display:flex;flex-direction:column;gap:12px}
+.meter{display:flex;flex-direction:column;gap:6px}
+.meter .mr{display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--ink-2)}
+.meter .mr .v{font-family:var(--fm);color:var(--ink)}
+.track{height:7px;background:var(--surface-3);border-radius:20px;overflow:hidden;display:flex}
+.track i{display:block;height:100%}
+.track i.f-ok{background:var(--ok)} .track i.f-warn{background:var(--warn)} .track i.f-bad{background:var(--bad)}
+.track i.f-ds{background:repeating-linear-gradient(45deg,var(--navy),var(--navy) 3px,transparent 3px,transparent 6px);opacity:.8}
+.fld{font-size:13px;line-height:1.58}
+.fld .k{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:3px}
+.fld .v{color:var(--ink-2)}
+.c-f{padding:10px 17px;border-top:1px solid var(--line);background:var(--surface-2);font-size:12px;color:var(--ink-3);display:flex;gap:14px;flex-wrap:wrap}
+.c-f b{color:var(--ink-2);font-weight:600}
+
+/* ---------- MATRIX ---------- */
+.scroller{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table.mx{border-collapse:separate;border-spacing:0;width:100%;font-size:12.5px}
+table.mx th,table.mx td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:center;vertical-align:middle}
+table.mx thead th{position:sticky;top:0;background:var(--surface-2);font-size:10.5px;font-weight:600;color:var(--ink-2);line-height:1.3;padding:9px 5px;z-index:2;border-bottom:1px solid var(--line-2)}
+table.mx thead th .num{display:block;font-family:var(--fm);font-size:11px;color:var(--navy);font-weight:600}
+table.mx th.rowh,table.mx td.rowh{position:sticky;left:0;background:var(--surface);text-align:left;min-width:212px;max-width:212px;font-weight:600;font-size:12.5px;z-index:1;border-right:1px solid var(--line-2)}
+table.mx tbody tr:hover td,table.mx tbody tr:hover td.rowh{background:var(--surface-2)}
+table.mx td.score{font-family:var(--fm);font-weight:600;min-width:52px;border-left:1px solid var(--line-2)}
+.mk{display:inline-flex;width:21px;height:21px;border-radius:5px;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:var(--fm)}
+.mk-y{background:var(--ok-soft);color:var(--ok)}
+.mk-n{background:var(--bad-soft);color:var(--bad)}
+.mk-p{background:var(--gold-soft);color:var(--gold)}
+.mk-na{background:var(--surface-3);color:var(--ink-3)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--ink-2);align-items:center}
+.legend span{display:flex;align-items:center;gap:7px}
+.note{font-size:12.5px;color:var(--ink-3);line-height:1.6;margin-top:12px;max-width:80ch}
+.note b{color:var(--ink-2)}
+
+/* ---------- CHART ---------- */
+.chartcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;box-shadow:var(--sh)}
+.chartcard h3{font-size:14px;margin-bottom:3px}
+.chartcard .sub{font-size:12px;color:var(--ink-3);margin-bottom:16px}
+.split{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+@media (max-width:960px){.split{grid-template-columns:1fr}}
+
+/* ---------- TIMELINE ---------- */
+.tl{display:grid;gap:0}
+.tl-row{display:grid;grid-template-columns:104px 1fr;gap:18px;padding:13px 0;border-top:1px solid var(--line)}
+.tl-row:first-child{border-top:none}
+.tl-row.on{background:linear-gradient(90deg,var(--gold-soft),transparent 70%)}
+.tl-d{font-family:var(--fm);font-size:12px;color:var(--ink-3);padding-top:2px}
+.tl-d b{display:block;color:var(--navy);font-size:11px;letter-spacing:.05em}
+.tl-t{font-size:13.5px;color:var(--ink-2);line-height:1.55}
+.tl-t b{color:var(--ink);font-weight:600}
+
+/* ---------- TABLE ---------- */
+table.data{width:100%;border-collapse:collapse;font-size:13px}
+table.data th{text-align:left;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700;padding:9px 12px;border-bottom:1px solid var(--line-2);background:var(--surface-2)}
+table.data td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2);line-height:1.55}
+table.data td b{color:var(--ink);font-weight:600}
+table.data tr:last-child td{border-bottom:none}
+table.data td.num{font-family:var(--fm);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap;color:var(--ink)}
+
+/* ---------- ACTION LIST ---------- */
+.acts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:900px){.acts{grid-template-columns:1fr}}
+.act{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:14px 16px;box-shadow:var(--sh)}
+.act h4{font-size:13.5px;color:var(--navy);margin-bottom:7px}
+.act ul{margin:0;padding-left:17px;font-size:13px;color:var(--ink-2);line-height:1.6}
+.act li+li{margin-top:5px}
+
+/* ---------- BLOCKER ---------- */
+.blk{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);box-shadow:var(--sh)}
+.blk-h{padding:13px 18px;background:var(--bad-soft);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.blk-h .ic{width:26px;height:26px;flex:none;border-radius:50%;background:var(--bad);color:var(--surface);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.blk-h h3{font-size:14px;color:var(--bad)}
+.blk-h .cnt{margin-left:auto;font-family:var(--fm);font-size:12px;color:var(--bad);font-weight:600}
+
+/* ---------- FLOW ---------- */
+.flow{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding:4px 0}
+.fstep{flex:1;min-width:168px;display:flex;flex-direction:column}
+.fbox{border:1px solid var(--line-2);border-radius:9px;padding:13px 14px;background:var(--surface);height:100%;display:flex;flex-direction:column;gap:5px}
+.fbox.done{border-color:var(--ok);background:var(--ok-soft)}
+.fbox.block{border-color:var(--bad);background:var(--bad-soft);border-width:2px}
+.fbox.wait{border-color:var(--gold);background:var(--gold-soft)}
+.fbox .st{font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.fbox .ft{font-size:13px;font-weight:700;line-height:1.35}
+.fbox .fs{font-size:11.5px;color:var(--ink-2);line-height:1.45}
+.farr{flex:0 0 34px;display:flex;align-items:center;justify-content:center;color:var(--ink-3);font-size:17px}
+
+footer{padding:30px 0 44px;border-top:1px solid var(--line);background:var(--surface-2);font-size:12.5px;color:var(--ink-3);line-height:1.7}
+footer b{color:var(--ink-2);font-weight:600}
+footer .fgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:26px}
+@media (max-width:800px){footer .fgrid{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+<header class="site">
+  <div class="wrap hd">
+    <div class="seal">VH</div>
+    <div class="id">
+      <div class="org">Bộ Văn hóa, Thể thao và Du lịch</div>
+      <h1>Chuyên trang Dữ liệu · Theo dõi 07 cơ sở dữ liệu theo Nghị quyết 11/NQ-CP</h1>
+    </div>
+    <div class="spacer"></div>
+    <div class="periodbar">
+      <label for="periodSel">Kỳ báo cáo</label>
+      <select id="periodSel"></select>
+      <div class="navstep">
+        <button id="btnPrev" title="Kỳ trước">‹</button>
+        <button id="btnNext" title="Kỳ sau">›</button>
+      </div>
+    </div>
+  </div>
+  <nav class="tabs"><div class="wrap">
+    <a href="#tongquan">Tổng quan</a>
+    <a href="#danhsach">07 CSDL</a>
+    <a href="#matran">Ma trận 19 tiêu chí</a>
+    <a href="#lamgiau">Làm giàu dữ liệu C06</a>
+    <a href="#dienbien">Diễn biến 8 kỳ</a>
+    <a href="#vuongmac">Vướng mắc</a>
+    <a href="#thucday">Cần thúc đẩy</a>
+    <a href="#taichinh">Kinh phí &amp; hạ tầng</a>
+  </div></nav>
+</header>
+
+<div class="ribbon"><div class="wrap">
+  <div class="kname" id="ribName"></div>
+  <div class="krange" id="ribRange"></div>
+  <div class="ksrc" id="ribSrc"></div>
+</div></div>
+
+<section id="tongquan">
+  <div class="wrap">
+    <div class="lead">
+      <div class="body">
+        <p>Chuyên trang theo dõi tiến độ <b>07 cơ sở dữ liệu quốc gia, chuyên ngành</b> được giao cho Bộ Văn hóa, Thể thao và Du lịch, gồm <b>03 CSDL đến hạn 31/12/2025</b> (đã quá hạn) và <b>04 CSDL đến hạn 30/11/2026</b>. Mức độ hoàn thành chấm theo <b>19 tiêu chí</b> của Trung tâm Dữ liệu quốc gia (C12 – Bộ Công an).</p>
+        <p id="leadDyn"></p>
+      </div>
+      <div class="basis">
+        <span class="lbl">Căn cứ</span>
+        <b>Nghị quyết số 11/NQ-CP</b> ngày 14/01/2026 của Chính phủ, sửa đổi, bổ sung <b>Nghị quyết số 71/NQ-CP</b> ngày 01/4/2025 — Chương trình hành động thực hiện Nghị quyết 57-NQ/TW.<br>
+        <b>Kế hoạch 100 ngày</b> xử lý điểm nghẽn chuyển đổi số của Bộ (NV21): hoàn thành kết nối, đồng bộ ít nhất <b>04/07 CSDL</b> về Trung tâm Dữ liệu quốc gia trước <b>30/11/2026</b>.
+      </div>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </div>
+</section>
+
+<section class="alt" id="danhsach">
+  <div class="wrap">
+    <div class="shead"><h2>07 cơ sở dữ liệu theo Nghị quyết 11/NQ-CP</h2><div class="rule"></div><div class="hint" id="dsHint"></div></div>
+    <div id="groups"></div>
+  </div>
+</section>
+
+<section id="matran">
+  <div class="wrap">
+    <div class="shead"><h2>Ma trận 19 tiêu chí của Trung tâm Dữ liệu quốc gia</h2><div class="rule"></div><div class="hint">Cột đầu cố định · cuộn ngang để xem đủ 19 tiêu chí</div></div>
+    <div class="scroller"><table class="mx" id="mx"></table></div>
+    <div class="legend">
+      <span><i class="mk mk-y">✓</i> Đạt</span>
+      <span><i class="mk mk-n">✕</i> Chưa đạt</span>
+      <span><i class="mk mk-p">◐</i> Đang đối soát / đang thực hiện</span>
+      <span><i class="mk mk-na">–</i> Không yêu cầu</span>
+    </div>
+    <p class="note" id="mxNote"></p>
+  </div>
+</section>
+
+<section class="alt" id="lamgiau">
+  <div class="wrap">
+    <div class="shead"><h2>Đối soát, làm giàu dữ liệu cho CSDL quốc gia về dân cư</h2><div class="rule"></div><div class="hint">Nhiệm vụ thường xuyên, ngoài phạm vi 07 CSDL</div></div>
+    <div class="cards" id="lgCards"></div>
+    <div class="scroller" style="margin-top:16px"><table class="data" id="lgTable"></table></div>
+  </div>
+</section>
+
+<section id="dienbien">
+  <div class="wrap">
+    <div class="shead"><h2>Diễn biến qua 8 kỳ báo cáo</h2><div class="rule"></div><div class="hint">Số liệu định lượng trích trực tiếp từ báo cáo tuần</div></div>
+    <div class="split">
+      <div class="chartcard">
+        <h3>Bản ghi di sản được xử lý trong kỳ</h3>
+        <div class="sub">Các Sở rà soát, chuẩn hóa, làm sạch dữ liệu Hiện vật và Di sản văn hóa phi vật thể</div>
+        <div id="chartClean"></div>
+      </div>
+      <div class="chartcard">
+        <h3>Hồ sơ đã đối soát với C06 (lũy kế)</h3>
+        <div class="sub">Hướng dẫn viên du lịch và Thẻ nhà báo</div>
+        <div id="chartRecon"></div>
+      </div>
+    </div>
+    <div class="chartcard" style="margin-top:16px">
+      <h3>Mốc chính theo thời gian</h3>
+      <div class="sub">Kỳ đang xem được tô sáng</div>
+      <div class="tl" id="tl"></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="vuongmac">
+  <div class="wrap">
+    <div class="shead"><h2>Khó khăn, vướng mắc trong kỳ</h2><div class="rule"></div><div class="hint" id="vmHint"></div></div>
+    <div class="blk">
+      <div class="blk-h"><div class="ic">!</div><h3>Nút thắt của toàn tuyến</h3><div class="cnt" id="blkCnt"></div></div>
+      <div class="scroller" style="border:none;border-radius:0"><table class="data" id="vmTable"></table></div>
+    </div>
+    <div class="chartcard" style="margin-top:18px">
+      <h3>Luồng kết nối, đồng bộ và vị trí nút thắt</h3>
+      <div class="sub" id="flowSub"></div>
+      <div class="flow" id="flow"></div>
+    </div>
+  </div>
+</section>
+
+<section id="thucday">
+  <div class="wrap">
+    <div class="shead"><h2>Các đơn vị cần thúc đẩy triển khai</h2><div class="rule"></div><div class="hint" id="tdHint"></div></div>
+    <div class="acts" id="acts"></div>
+  </div>
+</section>
+
+<section class="alt" id="taichinh">
+  <div class="wrap">
+    <div class="shead"><h2>Kinh phí và hạ tầng</h2><div class="rule"></div><div class="hint">Đơn vị: triệu đồng · số liệu ổn định qua các kỳ</div></div>
+    <div class="split">
+      <div class="scroller"><table class="data" id="finTable"></table></div>
+      <div class="chartcard">
+        <h3>Hạ tầng vận hành</h3>
+        <div class="sub">Nơi đặt hệ thống của từng CSDL</div>
+        <div id="infra"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap fgrid">
+  <div>
+    <b>Nguồn dữ liệu.</b> Toàn bộ nội dung chuyên trang trích từ 08 kỳ báo cáo của Trung tâm Chuyển đổi số Văn hóa, Thể thao và Du lịch trình Thứ trưởng Nguyễn Huy Dũng, từ báo cáo nền (mốc 17/7/2026) đến báo cáo tuần kỳ 8 (22/8 – 28/8/2026, ký ngày 30/8/2026). Số hiệu văn bản, con số và ngày tháng giữ nguyên theo báo cáo gốc; chuyên trang không bổ sung số liệu ngoài nguồn.
+  </div>
+  <div>
+    <b>Điểm cần lưu ý.</b> Báo cáo tuần kỳ 6 nêu “07/07 CSDL có chuyển biến” ngay trước câu “riêng CSDL Đăng ký quyền tác giả chưa có chuyển biến” — chuyên trang ghi 06/07 và giữ nguyên nguyên văn để đối chiếu. Ma trận 19 tiêu chí phản ánh hiện trạng đến kỳ 8; các báo cáo tuần không chấm lại từng tiêu chí theo kỳ.
+    <br><br><b>Cập nhật:</b> <span class="mono">04/9/2026</span>
+  </div>
+</div></footer>
+
+<script>
+"use strict";
+
+var CRIT = ["Đã có kế hoạch","Đã cấp hoặc đã có kinh phí","Đã thống nhất phạm vi","Đã ký hợp đồng","Đã triển khai","Đã hình thành nền tảng","Đã bắt đầu tạo lập CSDL","Quy định trách nhiệm tạo lập","Bảo đảm 6 yêu cầu đúng, đủ, sạch, sống, thống nhất, dùng chung","Đã làm sạch, đối soát với CSDL dân cư","Đã sẵn sàng kết nối, chia sẻ","Đã công bố các trường thông tin","Đường truyền kết nối về TTDLQG","Giải pháp ký số, chứng thư số công vụ","Kết nối, chia sẻ nội ngành","Đồng bộ dữ liệu về TTDLQG","Thay thế TPHS / cắt giảm TTHC","Kết nối, chia sẻ ngoại ngành","Cập nhật thời gian thực về TTDLQG"];
+
+/* Ma trận hiện trạng đến kỳ 8 (28/8/2026).
+   y = đạt · n = chưa đạt · p = đang đối soát/đang thực hiện · x = không yêu cầu */
+var MX = {
+  bqtg:  "yyynyyyyypyyyyypyyy",
+  hienvat:"yyyyyyyyypyyyyypyxx",
+  pvt:   "yyyyyyyyypyyyyypyxx",
+  baochi:"yyynyyyyypyyyyypyyy",
+  qcao:  "yynnnnnnnnnnnnnnnnn",
+  blgd:  "yynnnnnnnnnnnnnnnnn",
+  thethao:"ynnnnnnnnnnnnnnnnnn"
+};
+
+var UNITS = {
+  bqtg:"Cục Bản quyền tác giả", hienvat:"Cục Di sản văn hóa", pvt:"Cục Di sản văn hóa",
+  baochi:"Cục Báo chí", qcao:"Cục Văn hóa cơ sở, Gia đình và Thư viện",
+  blgd:"Cục Văn hóa cơ sở, Gia đình và Thư viện", thethao:"Cục Thể dục thể thao Việt Nam"
+};
+var NAMES = {
+  bqtg:"Đăng ký quyền tác giả, quyền liên quan", hienvat:"Hiện vật", pvt:"Di sản văn hóa phi vật thể",
+  baochi:"Cơ quan báo chí (08 CSDL chuyên ngành)", qcao:"Sản phẩm quảng cáo",
+  blgd:"Phòng, chống bạo lực gia đình", thethao:"Thành tích thể thao"
+};
+var G1 = ["bqtg","hienvat","pvt"], G2 = ["baochi","qcao","blgd","thethao"];
+
+var FIN = [
+  {k:"baochi", capho:"390", tong:"10.977", note:"Đã phê duyệt điều chỉnh chủ trương (QĐ 2131/QĐ-BVHTTDL ngày 14/8/2026). Ba gói thầu chuẩn bị đầu tư: tư vấn lập BCKTKT 288,5 tr · thẩm tra 17,4582 tr · thẩm định giá 90 tr."},
+  {k:"qcao", capho:"3.500", tong:"—", note:"Cấp theo QĐ 1046/QĐ-BVHTTDL ngày 08/5/2026. Đã sang giai đoạn thực hiện đầu tư."},
+  {k:"blgd", capho:"3.500", tong:"120.000", note:"Nhu cầu thực tế 120 tỷ đồng; mới được cấp 3,5 tỷ cho giai đoạn 1 (khảo sát, mô hình dữ liệu, nền tảng, thí điểm). Đơn vị đề nghị lùi hạn sang 12/2028."},
+  {k:"bqtg", capho:"đã duyệt", tong:"—", note:"Chủ trương và dự toán nhiệm vụ chuẩn hóa dữ liệu, xây dựng phần mềm kết nối TTDLQG được phê duyệt tại QĐ 2060/QĐ-BVHTTDL ngày 07/8/2026."},
+  {k:"hienvat", capho:"chưa bố trí", tong:"—", note:"Việc rà soát, chuẩn hóa, làm sạch xử lý trùng lặp chưa triển khai diện rộng do chưa được bố trí kinh phí."},
+  {k:"pvt", capho:"chưa bố trí", tong:"—", note:"Cùng nguồn với CSDL Hiện vật; chưa được bố trí kinh phí làm sạch."},
+  {k:"thethao", capho:"0", tong:"—", note:"Chưa được bố trí kinh phí; chờ phê duyệt chủ trương dự án Nền tảng số Thể thao Việt Nam. Đề nghị lùi hạn sang 12/2027."}
+];
+
+var INFRA = [
+  {k:"baochi", v:"Mô hình phân tán: một phần tại hạ tầng Bộ, một phần trên Cloud (VCCorp, Viettel)."},
+  {k:"hienvat", v:"Vận hành tại Data Center của CMC, bảo đảm an ninh mạng cấp độ 3."},
+  {k:"pvt", v:"Vận hành tại Data Center của CMC, bảo đảm an ninh mạng cấp độ 3."},
+  {k:"bqtg", v:"Lưu trữ trên dịch vụ Cloud thuê ngoài của CMC."},
+  {k:"qcao", v:"Chưa hình thành nền tảng; đã đăng ký tài nguyên trên nền tảng đám mây của Trung tâm Dữ liệu quốc gia."},
+  {k:"blgd", v:"Chưa có hệ thống; dự kiến dùng hạ tầng TTDLQG hoặc thuê ngoài, không xây riêng."},
+  {k:"thethao", v:"Triển khai tại chỗ (on-premise) tại 36 Trần Phú, thuê đường truyền CMC. Phần mềm từ năm 2008 đã hỏng, ngừng hoạt động."}
+];
+
+/* ---------- 8 KỲ BÁO CÁO ---------- */
+var P = [
+{
+ id:"k1", name:"Kỳ 1 · Báo cáo nền", range:"Mốc 17/7 – 31/7/2026", date:"2026-07-25",
+ src:"Báo cáo về tình hình phát triển các CSDL trọng điểm, ngày 25/7/2026",
+ chuyenbien:"—", chuyenbienNote:"Báo cáo nền, chưa đối chiếu kỳ trước",
+ conlai:"4,5 tháng", ketnoi:0,
+ lead:"Báo cáo nền dựng bức tranh xuất phát: cả 03 CSDL nhóm 1 đã vận hành nhưng chưa CSDL nào hoàn thành làm sạch để kết nối chính thức với C12; cả 04 CSDL nhóm 2 chưa có sản phẩm chạy được.",
+ kpiExtra:{clean:"0", recon:"10.000+"},
+ csdl:{
+  bqtg:{kq:"Chưa triển khai đối soát do Cục và đối tác xây dựng phần mềm chưa thống nhất phương án phối hợp. Ngày 14/7/2026 trình Tờ trình số 06/TTr-BQTG xin chủ trương nhiệm vụ chuẩn hóa dữ liệu và xây dựng phần mềm kết nối Trung tâm Dữ liệu quốc gia.", dg:"Đang trình Thứ trưởng xem xét, chỉ đạo.", sev:"bad", st:"Chậm"},
+  hienvat:{kq:"Đã chuẩn hóa 82.018 dữ liệu hiện vật theo chuẩn Bộ Công an; ban hành quy trình tạo lập và quản trị dữ liệu tại QĐ 991/QĐ-BVHTTDL ngày 29/4/2026; hoàn thành kiểm thử DevTest với C12. Đang xây dựng công cụ phát hiện dữ liệu trùng lặp, thử nghiệm từ 27/7/2026.", dg:"Chưa đối soát nên chưa đồng bộ dữ liệu làm giàu cho C06.", sev:"warn", st:"Quá hạn"},
+  pvt:{kq:"Đã chuẩn hóa 4.125 dữ liệu trên phần mềm hệ thống; cùng quy trình QĐ 991/QĐ-BVHTTDL ngày 29/4/2026 và đã kiểm thử DevTest với C12. Dùng chung công cụ phát hiện trùng lặp với CSDL Hiện vật.", dg:"Chưa đối soát nên chưa đồng bộ dữ liệu làm giàu cho C06.", sev:"warn", st:"Quá hạn"},
+  baochi:{kq:"Gồm 08 CSDL chuyên ngành; đang thiết kế kiến trúc bảo đảm đáp ứng tiêu chí của Bộ Công an. Đang xây dựng, hoàn thiện hồ sơ điều chỉnh chủ trương đầu tư cho phù hợp Nghị định số 224/2026/NĐ-CP.", dg:"Dự kiến phê duyệt dự án tháng 9/2026, gói thầu EP từ tháng 10/2026.", sev:"warn", st:"Chuẩn bị đầu tư"},
+  qcao:{kq:"Đã xin ý kiến và nhận công văn trả lời của C12; đang đăng ký tài nguyên trên nền tảng đám mây của Trung tâm Dữ liệu quốc gia. Hoàn thành lập, thẩm định, phê duyệt dự toán và kế hoạch lựa chọn nhà thầu giai đoạn chuẩn bị đầu tư.", dg:"Đang trong giai đoạn chuẩn bị đầu tư, bám sát QĐ 1046/QĐ-BVHTTDL ngày 08/5/2026.", sev:"warn", st:"Chuẩn bị đầu tư"},
+  blgd:{kq:"Ngày 21/7/2026 trình Thứ trưởng phương án xây dựng CSDL giai đoạn 1 bằng nguồn chi thường xuyên và làm việc với MobiFone thống nhất nội dung, thời gian, quy trình với kinh phí 3,5 tỷ đồng. Đang hoàn thiện hồ sơ lựa chọn đơn vị tư vấn.", dg:"Chậm. Nhu cầu 120 tỷ / mới được cấp 3,5 tỷ; đề nghị lùi hạn sang 12/2028.", sev:"bad", st:"Chậm"},
+  thethao:{kq:"Đang phối hợp đơn vị đồng hành xây dựng dự án Nền tảng số thể dục thể thao Việt Nam (hợp nhất 03 dự án đơn lẻ); hoàn thành dự thảo và đang lấy ý kiến góp ý trước khi trình Lãnh đạo Bộ.", dg:"Chậm. Chưa lập được hồ sơ đề xuất kinh phí; đề nghị lùi hạn sang 12/2027.", sev:"bad", st:"Chậm"}
+ },
+ lg:{
+  hdv:{kq:"Đã đối soát, làm sạch thành công hơn 10.000 thông tin cá nhân. Hệ thống quản lý hơn 78.288 hồ sơ hướng dẫn viên (46.545 đang hoạt động).", vm:"C06 tạm khóa dịch vụ do vượt ngưỡng truy vấn."},
+  the:{kq:"Dữ liệu thẻ nhà báo đã số hóa 100% (24.000 thẻ); đã kiểm thử truyền dữ liệu nội bộ qua trục LGSP.", vm:"C06 tạm khóa dịch vụ; chưa trả dữ liệu sạch về kho."}
+ },
+ vm:[
+  {kk:"Dịch vụ đối soát của C06 bị tạm khóa do vượt ngưỡng truy vấn", ca:"Hướng dẫn viên du lịch; Thẻ nhà báo", ng:"Khách quan — thuộc thẩm quyền C06, Bộ Công an", hx:"Trung tâm đã giải trình, cung cấp log hệ thống và đề xuất tăng ngưỡng truy vấn, mở lại dịch vụ."},
+  {kk:"Chưa bố trí kinh phí rà soát, chuẩn hóa, làm sạch dữ liệu", ca:"Hiện vật; Di sản văn hóa phi vật thể", ng:"Chủ quan — Cục Di sản văn hóa", hx:"Đề nghị bố trí kinh phí để xử lý dứt điểm trùng lặp dữ liệu nội bộ."},
+  {kk:"Chưa thống nhất phương án phối hợp giữa Cục và đối tác xây dựng phần mềm", ca:"Đăng ký quyền tác giả, quyền liên quan", ng:"Chủ quan — Cục Bản quyền tác giả", hx:"Trình Thứ trưởng phê duyệt chủ trương nhiệm vụ chuẩn hóa dữ liệu (Tờ trình 06/TTr-BQTG ngày 14/7/2026)."}
+ ],
+ acts:[
+  {u:"Cục Di sản văn hóa", li:["Xử lý dứt điểm tình trạng trùng lặp dữ liệu nội bộ.","Hoàn thành đối soát, làm sạch toàn bộ dữ liệu chủ trọng yếu và kết nối chính thức lên môi trường thật của C12."]},
+  {u:"Cục Bản quyền tác giả", li:["Khảo sát phần mềm quản lý, khai thác tập trung CSDL bản quyền.","Làm việc với doanh nghiệp đồng hành FPT.","Xây dựng hồ sơ phê duyệt chủ trương đầu tư trình Lãnh đạo Bộ."]},
+  {u:"Cục Báo chí", li:["Chủ động làm việc với Trung tâm Chuyển đổi số và C06 để xác nhận kết quả làm sạch dữ liệu, hoàn thành kết nối chính thức."]},
+  {u:"Cục Du lịch Quốc gia Việt Nam", li:["Xây dựng quy trình tạo lập và quản trị dữ liệu.","Xây dựng kế hoạch kết nối, tích hợp dữ liệu với Kho CSDL tổng hợp quốc gia (C12)."]}
+ ]
+},
+{
+ id:"k2", name:"Kỳ 2", range:"12/7 – 17/7/2026", date:"2026-07-18",
+ src:"Báo cáo tuần kỳ 2, ngày 18/7/2026",
+ chuyenbien:"02/04", chuyenbienNote:"Nhóm 2 chuyển biến về thủ tục; nhóm 1 đứng yên",
+ conlai:"4,5 tháng", ketnoi:0,
+ lead:"Kết quả duy nhất mang tính định lượng trong kỳ thuộc về nhiệm vụ làm giàu dữ liệu cho C06. Nhóm 1 không có chuyển biến về khối lượng làm sạch do dịch vụ đối soát của C06 bị tạm khóa từ ngày 15/7/2026.",
+ kpiExtra:{clean:"0", recon:"10.000+"},
+ csdl:{
+  bqtg:{kq:"Đã chuẩn hóa khoảng 20.000 dữ liệu đăng ký quyền tác giả (01/2024 – 11/2025), dữ liệu sẵn sàng. Khối lượng làm sạch trong kỳ: 0.", dg:"Không có chuyển biến về khối lượng làm sạch.", sev:"bad", st:"Đứng yên"},
+  hienvat:{kq:"Chưa phản hồi Công văn đôn đốc số 911/CĐSVHTTDL-HTSATTT ngày 10/7/2026 (lần 2) về kế hoạch rà soát, chuẩn hóa, làm sạch dữ liệu. Khối lượng làm sạch trong kỳ: 0.", dg:"Không có chuyển biến về khối lượng làm sạch.", sev:"bad", st:"Đứng yên"},
+  pvt:{kq:"Cùng tình trạng với CSDL Hiện vật: chưa phản hồi văn bản đôn đốc lần 2, khối lượng làm sạch trong kỳ bằng 0.", dg:"Không có chuyển biến về khối lượng làm sạch.", sev:"bad", st:"Đứng yên"},
+  baochi:{kq:"Đang chuẩn bị đầu tư, chưa có sản phẩm chạy được; tiếp tục hoàn thiện hồ sơ điều chỉnh chủ trương đầu tư.", dg:"Có chuyển biến về thủ tục.", sev:"warn", st:"Chuẩn bị đầu tư"},
+  qcao:{kq:"Đang xây dựng nền tảng theo kế hoạch tại QĐ 1046/QĐ-BVHTTDL ngày 08/5/2026.", dg:"Có chuyển biến về thủ tục.", sev:"warn", st:"Chuẩn bị đầu tư"},
+  blgd:{kq:"Đã xây dựng báo cáo kinh tế - kỹ thuật; chưa có hệ thống, dữ liệu chủ yếu trên giấy và Excel phân tán.", dg:"Chưa có sản phẩm chạy được.", sev:"bad", st:"Chậm"},
+  thethao:{kq:"Đang phối hợp đơn vị đồng hành xây dựng dự án nền tảng số thể dục thể thao Việt Nam (hợp nhất 03 dự án đơn lẻ).", dg:"Chưa có sản phẩm chạy được.", sev:"bad", st:"Chậm"}
+ },
+ lg:{
+  hdv:{kq:"Đã đối soát, làm sạch trên 10.000 bản ghi.", vm:"Dịch vụ đối soát bị C06 tạm khóa từ ngày 15/7/2026."},
+  the:{kq:"Đã tiến hành đối soát dữ liệu; dữ liệu sạch và sẵn sàng.", vm:"Dịch vụ đối soát bị C06 tạm khóa từ ngày 15/7/2026 do vượt ngưỡng truy vấn."}
+ },
+ vm:[
+  {kk:"Dịch vụ đối soát của C06 bị tạm khóa từ ngày 15/7/2026", ca:"Hướng dẫn viên du lịch; Thẻ nhà báo", ng:"Khách quan — thuộc thẩm quyền C06, Bộ Công an", hx:"Trung tâm giải trình, cung cấp log hệ thống, đề xuất tăng ngưỡng truy vấn."},
+  {kk:"Cục Di sản văn hóa chưa phản hồi văn bản đôn đốc lần thứ hai", ca:"Hiện vật; Di sản văn hóa phi vật thể", ng:"Chủ quan — Cục Di sản văn hóa", hx:"Tiếp tục đôn đốc theo Công văn số 911/CĐSVHTTDL-HTSATTT ngày 10/7/2026."}
+ ],
+ acts:[
+  {u:"Cục Di sản văn hóa", li:["Phản hồi kế hoạch rà soát, chuẩn hóa, làm sạch dữ liệu theo Công văn 911/CĐSVHTTDL-HTSATTT."]},
+  {u:"Cục Bản quyền tác giả", li:["Thống nhất phương án phối hợp với đối tác xây dựng phần mềm để bắt đầu đối soát."]},
+  {u:"Trung tâm Chuyển đổi số", li:["Làm việc với C06 để khôi phục dịch vụ đối soát và nâng ngưỡng truy vấn."]}
+ ]
+},
+{
+ id:"k3", name:"Kỳ 3", range:"18/7 – 25/7/2026", date:"2026-07-25",
+ src:"Báo cáo tuần kỳ 3, ngày 25/7/2026",
+ chuyenbien:"04/04", chuyenbienNote:"Cả 04 CSDL nhóm 2 chuyển biến về thủ tục",
+ conlai:"4 tháng", ketnoi:0,
+ lead:"Chuyển biến tích cực ở khâu thủ tục đầu tư của nhóm 2. Kết quả định lượng về đối soát vẫn gián đoạn do C06 tạm khóa dịch vụ; Trung tâm đã có Công văn số 971/CĐSVHTTDL-HTSATTT ngày 22/7/2026 đề nghị mở lại nhưng chưa được phản hồi.",
+ kpiExtra:{clean:"0", recon:"10.000+"},
+ csdl:{
+  bqtg:{kq:"Tháo gỡ vướng mắc phối hợp bằng cách trình Thứ trưởng phê duyệt chủ trương nhiệm vụ chuyển đổi số “Chuẩn hóa dữ liệu đăng ký quyền tác giả, quyền liên quan và xây dựng phần mềm phục vụ kết nối với Trung tâm Dữ liệu quốc gia” tại Tờ trình số 06/TTr-BQTG ngày 14/7/2026.", dg:"Có chuyển biến về thủ tục; chưa đối soát.", sev:"warn", st:"Đang trình"},
+  hienvat:{kq:"Đang xây dựng, hoàn thiện công cụ tự động phát hiện dữ liệu trùng lặp phục vụ làm sạch nội bộ; dự kiến thử nghiệm từ ngày 27/7/2026.", dg:"Có chuyển biến về công cụ kỹ thuật; chưa được bố trí kinh phí làm sạch diện rộng.", sev:"warn", st:"Quá hạn"},
+  pvt:{kq:"Dùng chung công cụ phát hiện trùng lặp; đang lấy ý kiến các địa phương, dự kiến thử nghiệm từ ngày 29/7/2026 tại Cục.", dg:"Có chuyển biến về công cụ kỹ thuật.", sev:"warn", st:"Quá hạn"},
+  baochi:{kq:"Xây dựng hồ sơ đề xuất điều chỉnh chủ trương đầu tư nhằm phù hợp Nghị định số 224/2026/NĐ-CP có hiệu lực từ 01/7/2026.", dg:"Có chuyển biến về thủ tục.", sev:"warn", st:"Chuẩn bị đầu tư"},
+  qcao:{kq:"Hoàn thành lựa chọn nhà thầu và ký hợp đồng các gói thầu tư vấn giai đoạn chuẩn bị đầu tư; hoàn thành chỉnh sửa Báo cáo kinh tế - kỹ thuật sau góp ý của C12.", dg:"Bám sát tiến độ theo kế hoạch.", sev:"warn", st:"Chuẩn bị đầu tư"},
+  blgd:{kq:"Họp với MobiFone ngày 21/7/2026 thống nhất nội dung, thời gian, quy trình thực hiện giai đoạn 1 với kinh phí 3,5 tỷ đồng.", dg:"Chậm; đề nghị lùi hạn sang 12/2028.", sev:"bad", st:"Chậm"},
+  thethao:{kq:"Hoàn thành dự thảo Dự án Nền tảng số Thể thao Việt Nam, đang lấy ý kiến góp ý các cơ quan, đơn vị liên quan trước khi trình Lãnh đạo Bộ.", dg:"Chậm; đề nghị lùi hạn sang 12/2027.", sev:"bad", st:"Chậm"}
+ },
+ lg:{
+  hdv:{kq:"Đã đối soát thành công hơn 10.000 bản ghi; tiến độ đang gián đoạn.", vm:"C06 tạm khóa dịch vụ; Công văn số 971/CĐSVHTTDL-HTSATTT ngày 22/7/2026 chưa được phản hồi."},
+  the:{kq:"Dữ liệu sẵn sàng; quá trình đối soát, làm sạch tạm gián đoạn.", vm:"C06 tạm khóa dịch vụ khai thác CSDL quốc gia về dân cư vì vượt ngưỡng truy vấn."}
+ },
+ vm:[
+  {kk:"C06 chưa phản hồi Công văn số 971/CĐSVHTTDL-HTSATTT ngày 22/7/2026 đề nghị mở lại dịch vụ", ca:"Hướng dẫn viên du lịch; Thẻ nhà báo", ng:"Khách quan — thuộc thẩm quyền C06, Bộ Công an", hx:"Tiếp tục theo dõi, đề nghị hỗ trợ mở lại dịch vụ và nâng ngưỡng truy vấn."},
+  {kk:"Kinh phí rà soát, chuẩn hóa, làm sạch chưa được bố trí", ca:"Hiện vật; Di sản văn hóa phi vật thể", ng:"Chủ quan — Cục Di sản văn hóa", hx:"Đề nghị bố trí kinh phí; trước mắt dùng công cụ phát hiện trùng lặp tự phát triển."}
+ ],
+ acts:[
+  {u:"Cục Di sản văn hóa", li:["Đưa công cụ phát hiện dữ liệu trùng lặp vào thử nghiệm từ 27/7/2026.","Chuẩn bị văn bản hướng dẫn địa phương rà soát, làm sạch dữ liệu."]},
+  {u:"Cục Bản quyền tác giả", li:["Theo đuổi phê duyệt chủ trương tại Tờ trình 06/TTr-BQTG ngày 14/7/2026."]},
+  {u:"Trung tâm Chuyển đổi số", li:["Tiếp tục làm việc với C06 để mở lại dịch vụ và nâng ngưỡng truy vấn."]}
+ ]
+},
+{
+ id:"k4", name:"Kỳ 4", range:"26/7 – 01/8/2026", date:"2026-08-01",
+ src:"Báo cáo tuần kỳ 4, ngày 01/8/2026",
+ chuyenbien:"04/04", chuyenbienNote:"Cả 04 CSDL nhóm 2 chuyển biến về thủ tục",
+ conlai:"4 tháng", ketnoi:0,
+ lead:"Bộ Công an đã mở lại quyền truy vấn nhưng chưa nâng hạn mức theo đề nghị, nên tiến độ đối soát, làm sạch vẫn chậm và chưa đáp ứng yêu cầu triển khai trên phạm vi toàn Bộ.",
+ kpiExtra:{clean:"0", recon:"10.020+"},
+ csdl:{
+  bqtg:{kq:"Vẫn đang trình Thứ trưởng phê duyệt chủ trương theo Tờ trình số 06/TTr-BQTG ngày 14/7/2026. Đã kiểm thử DevTest với C12 và hoàn thành đối soát dữ liệu qua dịch vụ 038.", dg:"Chưa chuyển biến về đối soát diện rộng.", sev:"bad", st:"Đang trình"},
+  hienvat:{kq:"Đã xin ý kiến các địa phương và đưa công cụ phát hiện trùng lặp vào thử nghiệm tại Cục từ ngày 29/7/2026. Dự kiến tuần đầu tháng 8/2026 gửi văn bản hướng dẫn các địa phương.", dg:"Có chuyển biến về công cụ kỹ thuật.", sev:"warn", st:"Quá hạn"},
+  pvt:{kq:"Cùng tiến trình với CSDL Hiện vật: thử nghiệm công cụ từ 29/7/2026, chuẩn bị văn bản hướng dẫn địa phương.", dg:"Có chuyển biến về công cụ kỹ thuật.", sev:"warn", st:"Quá hạn"},
+  baochi:{kq:"Tiếp tục hoàn thiện hồ sơ điều chỉnh chủ trương đầu tư, đang trình Lãnh đạo Bộ.", dg:"Có chuyển biến về thủ tục.", sev:"warn", st:"Chuẩn bị đầu tư"},
+  qcao:{kq:"Đang trong giai đoạn chuẩn bị đầu tư theo kế hoạch tại QĐ 1046/QĐ-BVHTTDL ngày 08/5/2026.", dg:"Bám sát tiến độ theo kế hoạch.", sev:"warn", st:"Chuẩn bị đầu tư"},
+  blgd:{kq:"Đang hoàn thiện hồ sơ lựa chọn đơn vị tư vấn; xây dựng kế hoạch điều tra, đánh giá hiện trạng CSDL và mức độ sẵn sàng kết nối, chia sẻ dữ liệu với các địa phương.", dg:"Chậm. Khoảng 50% trường thông tin phụ thuộc tiến độ kết nối của hơn 10 CSDL quốc gia và chuyên ngành khác.", sev:"bad", st:"Chậm"},
+  thethao:{kq:"Tổng hợp ý kiến góp ý và hoàn thiện báo cáo đề xuất chủ trương đầu tư trước khi trình Lãnh đạo Bộ phê duyệt.", dg:"Chậm; chưa có kinh phí.", sev:"bad", st:"Chậm"}
+ },
+ lg:{
+  hdv:{kq:"Đã đối soát thành công trên 10.000 bản ghi.", vm:"C06 đã mở lại quyền truy vấn nhưng hạn mức chưa được nâng theo đề nghị."},
+  the:{kq:"Đã hoàn thành xác thực thông tin công dân và thực hiện đối soát được 20 hồ sơ.", vm:"Hạn mức truy vấn dịch vụ 038 chưa được nâng, tiến độ đối soát còn chậm."}
+ },
+ vm:[
+  {kk:"Hạn mức truy vấn dịch vụ 038 chưa được nâng theo đề nghị tại Công văn 971/CĐSVHTTDL-HTSATTT", ca:"Hướng dẫn viên du lịch; Thẻ nhà báo", ng:"Khách quan — thuộc thẩm quyền C06, Bộ Công an", hx:"Tiếp tục đề nghị nâng hạn mức; điều tiết tần suất khai thác."},
+  {kk:"Kinh phí rà soát, chuẩn hóa, làm sạch chưa được bố trí cho các đơn vị chủ trì", ca:"Hiện vật; Di sản văn hóa phi vật thể", ng:"Chủ quan — Cục Di sản văn hóa", hx:"Đề nghị bố trí kinh phí."}
+ ],
+ acts:[
+  {u:"Cục Di sản văn hóa", li:["Ban hành văn bản hướng dẫn địa phương rà soát, phát hiện dữ liệu trùng lặp."]},
+  {u:"Cục Bản quyền tác giả", li:["Hoàn tất phê duyệt chủ trương để bước vào chuẩn hóa và kết nối đồng bộ chính thức."]},
+  {u:"Cục Thể dục thể thao Việt Nam", li:["Trình Lãnh đạo Bộ phê duyệt báo cáo đề xuất chủ trương đầu tư."]}
+ ]
+},
+{
+ id:"k5", name:"Kỳ 5", range:"03/8 – 08/8/2026", date:"2026-08-08",
+ src:"Báo cáo tuần kỳ 5, ngày 08/8/2026",
+ chuyenbien:"06/07", chuyenbienNote:"Riêng CSDL Đăng ký quyền tác giả không phát sinh chuyển biến",
+ conlai:"3,5 tháng", ketnoi:0,
+ lead:"Ba CSDL nhóm 1 đã quá hạn 07 tháng nhưng chưa CSDL nào hoàn thành làm sạch để kết nối chính thức. Bốn CSDL nhóm 2 chỉ còn 3,5 tháng đến hạn nhưng toàn bộ vẫn ở bước chuẩn bị đầu tư, chưa CSDL nào có sản phẩm chạy được.",
+ kpiExtra:{clean:"một phần", recon:"10.020+"},
+ csdl:{
+  bqtg:{kq:"Tờ trình số 06/TTr-BQTG ngày 14/7/2026 vẫn đang trình Lãnh đạo Bộ xem xét. Đến ngày 08/8/2026, Cục chưa triển khai đối soát dữ liệu.", dg:"Không có chuyển biến trong kỳ; quá hạn 07 tháng.", sev:"bad", st:"Đứng yên"},
+  hienvat:{kq:"Ban hành văn bản kèm tài liệu hướng dẫn gửi các Sở đề nghị rà soát, chuẩn hóa, làm sạch dữ liệu; ấn định hoàn thành chuẩn hóa dữ liệu địa danh hành chính và dữ liệu cá nhân trước ngày 20/8/2026. Một phần dữ liệu trên nền tảng đã được làm sạch, sẵn sàng đồng bộ.", dg:"Có chuyển biến; vướng mắc về kinh phí rà soát, chuẩn hóa.", sev:"warn", st:"Quá hạn"},
+  pvt:{kq:"Cùng văn bản hướng dẫn với CSDL Hiện vật; các Sở đang rà soát, chuẩn hóa, hoàn thành trước ngày 20/8/2026.", dg:"Có chuyển biến; vướng mắc về kinh phí rà soát, chuẩn hóa.", sev:"warn", st:"Quá hạn"},
+  baochi:{kq:"Đang hoàn thiện hồ sơ điều chỉnh chủ trương đầu tư theo Nghị định số 224/2026/NĐ-CP, chờ ý kiến Thứ trưởng. Đang thiết kế kiến trúc; dự kiến phê duyệt dự án tháng 9/2026, gói thầu EP từ tháng 10/2026.", dg:"Rủi ro không hoàn thành đúng hạn ở mức rất cao — chỉ còn khoảng 02 tháng thi công thực tế.", sev:"bad", st:"Rủi ro cao"},
+  qcao:{kq:"Đã trình Lãnh đạo Bộ ban hành Quyết định thành lập Hội đồng thẩm định dự án. Đã nhận văn bản góp ý thiết kế của C12; đang đăng ký tài nguyên trên nền tảng đám mây của Trung tâm Dữ liệu quốc gia.", dg:"Bám sát tiến độ; tiến triển tốt nhất trong nhóm 2.", sev:"warn", st:"Đúng tiến độ"},
+  blgd:{kq:"Đang hoàn thiện hồ sơ lựa chọn đơn vị tư vấn; xây dựng kế hoạch khảo sát hiện trạng nghiệp vụ và mức độ sẵn sàng kết nối tại một số địa phương đại diện.", dg:"Chậm. Nhu cầu 120 tỷ đồng / kinh phí hiện có 3,5 tỷ đồng; đề nghị lùi hạn sang 12/2028.", sev:"bad", st:"Chậm"},
+  thethao:{kq:"Trung tâm Thông tin - Truyền thông thể dục thể thao đang xin ý kiến các đơn vị về Báo cáo đề xuất chủ trương đầu tư sau điều chỉnh của dự án “Xây dựng nền tảng số Thể thao Việt Nam”.", dg:"Chậm. Phần mềm xây dựng từ năm 2008, chưa có kinh phí; đề nghị lùi hạn sang 12/2027.", sev:"bad", st:"Chậm"}
+ },
+ lg:{
+  hdv:{kq:"Tiếp tục đối soát; khối lượng chưa tăng đáng kể do ràng buộc hạn mức.", vm:"Hạn mức truy vấn dịch vụ 038 chưa được nâng theo Công văn 971/CĐSVHTTDL-HTSATTT ngày 22/7/2026."},
+  the:{kq:"Đã hoàn thành xác thực thông tin công dân; tiếp tục đối soát trong hạn mức được cấp.", vm:"Hạn mức truy vấn dịch vụ 038 chưa được nâng."}
+ },
+ vm:[
+  {kk:"Hạn mức truy vấn dịch vụ xác thực thông tin công dân (dịch vụ 038) chưa được nâng", ca:"Toàn bộ công tác đối soát, làm sạch dữ liệu", ng:"Khách quan — C06, Bộ Công an", hx:"Tiếp tục đề nghị theo Công văn số 971/CĐSVHTTDL-HTSATTT ngày 22/7/2026."},
+  {kk:"Kinh phí rà soát, chuẩn hóa, làm sạch và kết nối dữ liệu chưa được bố trí cho các đơn vị chủ trì", ca:"Hiện vật; Di sản văn hóa phi vật thể; Thành tích thể thao", ng:"Chủ quan — các đơn vị chủ trì và khâu bố trí kinh phí", hx:"Đề nghị Lãnh đạo Bộ bố trí kinh phí thực hiện."}
+ ],
+ acts:[
+  {u:"Cục Bản quyền tác giả", li:["Đây là đơn vị duy nhất không phát sinh chuyển biến trong kỳ; cần khẩn trương triển khai đối soát."]},
+  {u:"Cục Báo chí", li:["Hoàn thiện hồ sơ điều chỉnh chủ trương đầu tư, trình phê duyệt để kịp gói thầu EP từ tháng 10/2026."]},
+  {u:"Cục Di sản văn hóa", li:["Đôn đốc các Sở hoàn thành chuẩn hóa dữ liệu địa danh hành chính và dữ liệu cá nhân trước 20/8/2026."]}
+ ]
+},
+{
+ id:"k6", name:"Kỳ 6", range:"10/8 – 15/8/2026", date:"2026-08-15",
+ src:"Báo cáo tuần kỳ 6, ngày 15/8/2026",
+ chuyenbien:"06/07", chuyenbienNote:"Báo cáo gốc ghi “07/07 có chuyển biến” ngay trước câu loại trừ CSDL Đăng ký quyền tác giả",
+ conlai:"3,5 tháng", ketnoi:0,
+ lead:"Bước ngoặt của cả chuỗi: ngày 14/8/2026, ba CSDL demo hệ thống với C12 và ký Biên bản xác nhận dữ liệu bảo đảm tiêu chí “Đúng - Đủ - Sạch - Sống”, đạt 4,5/5 điểm. Cục Bản quyền tác giả không dự họp, chưa ký biên bản và chưa có thông tin về lý do vắng mặt.",
+ kpiExtra:{clean:"61.205", recon:"10.029+"},
+ csdl:{
+  bqtg:{kq:"Ngày 07/8/2026 được phê duyệt chủ trương và dự toán nhiệm vụ “Chuẩn hóa dữ liệu đăng ký quyền tác giả, quyền liên quan và xây dựng phần mềm phục vụ kết nối với Trung tâm Dữ liệu quốc gia” tại Quyết định số 2060/QĐ-BVHTTDL; đang dự thảo kế hoạch lựa chọn nhà thầu. Không dự cuộc họp ngày 14/8/2026 với C12, chưa ký Biên bản xác nhận.", dg:"Không có chuyển biến về đối soát; quá hạn 07 tháng.", sev:"bad", st:"Đứng yên"},
+  hienvat:{kq:"Ngày 14/8/2026 demo hệ thống, thống nhất phương án kỹ thuật và ký Biên bản xác nhận dữ liệu đạt 4,5/5 điểm theo tiêu chí “Đúng - Đủ - Sạch - Sống”. Số bản ghi được xác nhận: 60.974/90.701; phần còn lại các Sở tiếp tục chuẩn hóa, hoàn thành trước 20/8/2026.", dg:"Có chuyển biến rõ nét — đủ điều kiện triển khai kết nối, đồng bộ với TTDLQG.", sev:"ok", st:"Đã ký biên bản"},
+  pvt:{kq:"Cùng cuộc họp ngày 14/8/2026, ký Biên bản xác nhận dữ liệu đạt 4,5/5 điểm. Số bản ghi được xác nhận: 231/4.128; phần còn lại đang được chuẩn hóa, làm sạch.", dg:"Có chuyển biến; khối lượng xác nhận còn rất nhỏ so với tổng dữ liệu.", sev:"warn", st:"Đã ký biên bản"},
+  baochi:{kq:"Ban hành Quyết định phê duyệt điều chỉnh chủ trương đầu tư (Quyết định số 2131/QĐ-BVHTTDL ngày 14/8/2026).", dg:"Rủi ro không hoàn thành đúng hạn ở mức rất cao; chỉ hoàn thiện được một phần là CSDL Thẻ nhà báo.", sev:"bad", st:"Rủi ro cao"},
+  qcao:{kq:"Quyết định thành lập Hội đồng thẩm định dự án đã được Lãnh đạo Bộ ban hành trong kỳ. Đã nhận văn bản góp ý thiết kế của C12; đang đăng ký tài nguyên trên nền tảng đám mây của TTDLQG.", dg:"Bám sát tiến độ.", sev:"warn", st:"Đúng tiến độ"},
+  blgd:{kq:"Đã ký Kế hoạch lựa chọn nhà thầu và công khai kết quả. Hoàn thiện khảo sát hiện trạng, nghiệp vụ tại Sở VHTTDL Hà Nội, phường Phú Diễn, phường Phú Thượng.", dg:"Chậm. Nhu cầu 120 tỷ / hiện có 3,5 tỷ đồng; đề nghị lùi hạn sang 12/2028.", sev:"bad", st:"Chậm"},
+  thethao:{kq:"Xin ý kiến và giải trình chủ trương đầu tư sau điều chỉnh của dự án “Xây dựng nền tảng số Thể thao Việt Nam”, trong đó có CSDL Thành tích thể thao.", dg:"Chậm. Phần mềm từ năm 2008, chưa có kinh phí, chưa lập được hồ sơ; đề nghị lùi hạn sang 12/2027.", sev:"bad", st:"Chậm"}
+ },
+ lg:{
+  hdv:{kq:"Đã đối soát hơn 10.000/46.545 hồ sơ. Đang xây dựng quy trình tạo lập, quản trị dữ liệu và phương án dịch chuyển dữ liệu về TTDLQG.", vm:"Chưa được nâng ngưỡng truy vấn nên chưa thể đối soát hơn 30.000 hồ sơ còn lại."},
+  the:{kq:"Hoàn thành xác thực thông tin công dân; chuẩn bị 1.000 hồ sơ mới, đã kết nối trục LGSP, đối soát được 29/1.000 hồ sơ. Ký Biên bản xác nhận ngày 14/8/2026 đạt 4,5/5 điểm với 12.333 bản ghi.", vm:"Khoảng 24.000 hồ sơ cũ dùng số CCCD/CMND cũ chưa đối soát được; hạn mức dịch vụ 038 chưa được nâng."}
+ },
+ vm:[
+  {kk:"Hạn mức truy vấn dịch vụ 038 chưa được nâng dù đã đề nghị hai lần (CV 971 ngày 22/7 và CV 1114 ngày 12/8/2026)", ca:"Toàn bộ công tác đối soát, làm sạch dữ liệu", ng:"Khách quan — C06, Bộ Công an", hx:"Tiếp tục làm việc trực tiếp với C06; điều tiết tần suất khai thác."},
+  {kk:"Cục Bản quyền tác giả đã được phê duyệt kinh phí nhưng chưa hoàn thiện hồ sơ lựa chọn đơn vị triển khai", ca:"Đăng ký quyền tác giả, quyền liên quan", ng:"Chủ quan — Cục Bản quyền tác giả", hx:"Yêu cầu khẩn trương hoàn thiện hồ sơ; chủ động chuẩn bị dữ liệu, không chờ đủ thủ tục."},
+  {kk:"Cục Bản quyền tác giả không dự họp ngày 14/8/2026 với C12, chưa ký Biên bản xác nhận và chưa có thông tin về lý do vắng mặt", ca:"Đăng ký quyền tác giả, quyền liên quan", ng:"Chủ quan — Cục Bản quyền tác giả", hx:"Báo cáo Lãnh đạo Bộ; đề nghị Cục ký và gửi biên bản làm việc về Trung tâm Chuyển đổi số."}
+ ],
+ acts:[
+  {u:"Cục Bản quyền tác giả", li:["Hoàn thiện hồ sơ lựa chọn đơn vị triển khai chuẩn hóa, làm sạch, kết nối dữ liệu.","Ký và gửi Biên bản xác nhận về Trung tâm Chuyển đổi số."]},
+  {u:"Cục Di sản văn hóa", li:["Đôn đốc các Sở hoàn thành chuẩn hóa trước 20/8/2026.","Chuyển phần dữ liệu đã làm sạch để đồng bộ về TTDLQG."]},
+  {u:"Cục Báo chí", li:["Trình phê duyệt dự án, dự toán và kế hoạch lựa chọn nhà thầu ngay trong tháng 8/2026.","Xây dựng phương án xử lý khoảng 24.000 hồ sơ thẻ nhà báo dùng CCCD/CMND cũ."]},
+  {u:"Trung tâm Chuyển đổi số", li:["Tiếp tục làm việc với C06 về hạn mức truy vấn và với C12 về lịch kết nối."]}
+ ]
+},
+{
+ id:"k7", name:"Kỳ 7", range:"16/8 – 22/8/2026", date:"2026-08-22",
+ src:"Báo cáo tuần kỳ 7, ngày 22/8/2026",
+ chuyenbien:"06/07", chuyenbienNote:"Riêng CSDL Đăng ký quyền tác giả chưa có chuyển biến",
+ conlai:"3,5 tháng", ketnoi:0,
+ lead:"C06 đã nâng hạn mức truy vấn lên 10.000 lượt/ngày, gỡ được nút thắt kỹ thuật kéo dài từ 15/7. Nút thắt mới chuyển sang phía C12: các đơn vị đã ký biên bản xác nhận từ 14/8 nhưng chưa nhận được phản hồi về thời gian kết nối.",
+ kpiExtra:{clean:"1.846", recon:"20.096+"},
+ csdl:{
+  bqtg:{kq:"Đang xây dựng và tìm kiếm đơn vị tư vấn để lựa chọn nhà thầu chuẩn bị đầu tư. Đến ngày 14/8/2026, Cục chưa triển khai đối soát dữ liệu.", dg:"Không có chuyển biến. Đang thực hiện theo quy trình đầu tư; quá hạn 08 tháng.", sev:"bad", st:"Đứng yên"},
+  hienvat:{kq:"Tiếp tục hướng dẫn các Sở rà soát, chuẩn hóa, làm sạch dữ liệu. Trong tuần xử lý 1.846 bản ghi: đã làm sạch 1.365, sạch một phần 204, loại bỏ 277.", dg:"Có chuyển biến.", sev:"ok", st:"Đang làm sạch"},
+  pvt:{kq:"Cùng tiến trình với CSDL Hiện vật; các Sở tiếp tục rà soát, chuẩn hóa, làm sạch theo Biên bản xác nhận ngày 14/8/2026.", dg:"Có chuyển biến.", sev:"ok", st:"Đang làm sạch"},
+  baochi:{kq:"Đã ban hành Quyết định phê duyệt điều chỉnh chủ trương (Quyết định số 2131/QĐ-BVHTTDL ngày 14/8/2026); đã gửi giấy mời các đơn vị tư vấn về quyết định phê duyệt dự toán. Riêng CSDL Thẻ nhà báo đã ký Biên bản xác nhận 14/8/2026 đạt 4,5/5 điểm, đã đối soát 96 hồ sơ.", dg:"Rủi ro không hoàn thành đúng hạn ở mức rất cao; chỉ hoàn thiện được một phần là CSDL Thẻ nhà báo.", sev:"bad", st:"Rủi ro cao"},
+  qcao:{kq:"Đã nhận văn bản góp ý thiết kế của C12; đang đăng ký tài nguyên trên nền tảng đám mây của TTDLQG. Đã hoàn thành Quyết định thành lập Hội đồng thẩm định dự án; triển khai theo QĐ 1046/QĐ-BVHTTDL ngày 08/5/2026.", dg:"Bám sát tiến độ theo kế hoạch.", sev:"warn", st:"Đúng tiến độ"},
+  blgd:{kq:"Đã ký Kế hoạch lựa chọn nhà thầu và công khai kết quả. Hoàn thiện khảo sát tại Sở VHTTDL Hà Nội, phường Phú Diễn, phường Phú Thượng. Đã chốt phạm vi kết nối với CSDL hộ tịch và CSDL quốc gia về dân cư trong năm 2026; hoàn thành phiếu khảo sát gửi các đơn vị.", dg:"Chậm. Kinh phí hiện có 3,5 tỷ đồng; phụ thuộc tiến độ liên thông dữ liệu liên ngành; đề nghị lùi hạn sang 12/2028.", sev:"bad", st:"Chậm"},
+  thethao:{kq:"Thứ trưởng Hoàng Đạo Cương nhất trí với Báo cáo đề xuất chủ trương đầu tư dự án “Xây dựng nền tảng số thể thao Việt Nam” (phiếu trình ngày 21/8/2026); đang xin ý kiến Thứ trưởng Nguyễn Huy Dũng. Đang dự thảo báo cáo đề xuất gia hạn sang 12/2027.", dg:"Chậm. Phần mềm xây dựng từ năm 2008, chưa có kinh phí; đề nghị lùi hạn sang 12/2027.", sev:"bad", st:"Chậm"}
+ },
+ lg:{
+  hdv:{kq:"Đã đối soát hơn 20.000/46.545 hồ sơ. Đang xây dựng quy trình tạo lập, quản trị dữ liệu và phương án dịch chuyển dữ liệu về TTDLQG.", vm:"C06 mới nâng ngưỡng truy vấn cho Bộ lên 10.000 lượt/ngày."},
+  the:{kq:"Hoàn thành xác thực thông tin công dân; chuẩn bị 1.000 hồ sơ mới, đã kết nối trục LGSP, đối soát được 96/1.000 hồ sơ.", vm:"Khoảng 24.000 hồ sơ cũ dùng số CCCD/CMND cũ chưa đối soát được."}
+ },
+ vm:[
+  {kk:"C06 mới mở nâng hạn mức truy vấn, làm chậm toàn bộ công tác đối soát, làm sạch dữ liệu", ca:"Hướng dẫn viên du lịch; Thẻ nhà báo", ng:"Khách quan — kỹ thuật, thuộc thẩm quyền C06, Bộ Công an", hx:"Tiếp tục làm việc trực tiếp với C06; theo dõi tình trạng truy vấn, điều tiết tần suất khai thác."},
+  {kk:"Dữ liệu đã làm sạch chưa được đồng bộ về TTDLQG; đã ký biên bản 14/8/2026 nhưng chưa nhận được phản hồi thời gian kết nối từ C12", ca:"Hiện vật; Di sản văn hóa phi vật thể; Thẻ nhà báo", ng:"Chủ quan — Cục Di sản văn hóa (theo báo cáo gốc)", hx:"Trung tâm hướng dẫn quy trình, yêu cầu kỹ thuật và phối hợp thực hiện đồng bộ ngay trong tháng 8/2026."},
+  {kk:"Chưa triển khai đối soát dữ liệu, đang lập kế hoạch lựa chọn nhà thầu chuẩn bị đầu tư", ca:"Đăng ký quyền tác giả, quyền liên quan", ng:"Chủ quan — Cục Bản quyền tác giả", hx:"Cục chủ động chuẩn bị dữ liệu và phương án đối soát, không chờ đủ thủ tục mới triển khai."},
+  {kk:"Khoảng 50% trường thông tin phụ thuộc tiến độ kết nối, chia sẻ của các CSDL quốc gia và chuyên ngành khác", ca:"Phòng, chống bạo lực gia đình", ng:"Khách quan — phụ thuộc tiến độ liên thông liên ngành", hx:"Đã xác định rõ phạm vi giai đoạn 1; xây dựng bộ phiếu khảo sát gửi các đơn vị."}
+ ],
+ acts:[
+  {u:"Cục Bản quyền tác giả", li:["Đơn vị chậm nhất trong 07 CSDL, quá hạn 08 tháng và không có chuyển biến.","Hoàn thành lựa chọn nhà thầu thực hiện đối soát và làm sạch dữ liệu trong tháng 8/2026."]},
+  {u:"Cục Báo chí", li:["Khẩn trương trình phê duyệt dự án, dự toán và kế hoạch lựa chọn nhà thầu ngay trong tháng 8/2026.","Xây dựng phương án xử lý khoảng 24.000 hồ sơ thẻ nhà báo dùng CCCD/CMND cũ."]},
+  {u:"Cục Văn hóa cơ sở, Gia đình và Thư viện", li:["Hoàn thành và gửi phiếu khảo sát tới các đơn vị liên quan để kết nối giai đoạn 1.","Chọn một số phường tại Hà Nội để triển khai thí điểm sau khi phần mềm hoàn thiện."]},
+  {u:"Cục Thể dục thể thao Việt Nam", li:["Chuẩn bị điều kiện để triển khai ngay khi chủ trương đầu tư được thống nhất.","Báo cáo tình hình và đề xuất gia hạn hoàn thành sang 12/2027."]}
+ ]
+},
+{
+ id:"k8", name:"Kỳ 8", range:"22/8 – 28/8/2026", date:"2026-08-30",
+ src:"Báo cáo tuần kỳ 8, ký ngày 30/8/2026",
+ chuyenbien:"05/07", chuyenbienNote:"CSDL Đăng ký quyền tác giả và CSDL Thành tích thể thao chuyển biến chậm",
+ conlai:"3 tháng", ketnoi:0,
+ lead:"Khối lượng làm sạch tăng gần 8 lần so với kỳ trước: các địa phương xử lý 14.280 bản ghi di sản trong một tuần. C06 đã mở lại dịch vụ 038 và Thẻ nhà báo đối soát thành công 2.009 hồ sơ. Nút thắt còn lại nằm ở khâu đồng bộ: ngày 27/8/2026 C12 mới gửi đặc tả API và đề nghị rà soát danh mục trước khi kết nối.",
+ kpiExtra:{clean:"14.280", recon:"49.892"},
+ csdl:{
+  bqtg:{kq:"Ngày 07/8/2026 được phê duyệt chủ trương và dự toán tại Quyết định số 2060/QĐ-BVHTTDL. Ngày 21/8/2026 ký hợp đồng với đơn vị tư vấn thẩm định giá và gửi Công văn số 801/CV-BQTG đề nghị thẩm định giá. Đến ngày 28/8/2026, Cục chưa triển khai đối soát dữ liệu.", dg:"Chậm. Đang thực hiện theo quy trình đầu tư; quá hạn 08 tháng.", sev:"bad", st:"Chậm"},
+  hienvat:{kq:"Trong tuần các địa phương xử lý 14.280 bản ghi: đã làm sạch 13.650, sạch một phần 531, loại bỏ 99. Ngày 27/8/2026 C12 gửi đặc tả API và đề nghị rà soát danh mục trước kết nối.", dg:"Đang phối hợp với C12 và Trung tâm Chuyển đổi số để rà soát và đồng bộ chính thức lên TTDLQG.", sev:"ok", st:"Sẵn sàng đồng bộ"},
+  pvt:{kq:"Cùng đợt xử lý 14.280 bản ghi với CSDL Hiện vật theo Biên bản xác nhận ngày 14/8/2026 (4,5/5 điểm). Ngày 27/8/2026 nhận đặc tả API từ C12.", dg:"Đang phối hợp với C12 và Trung tâm Chuyển đổi số để rà soát và đồng bộ chính thức lên TTDLQG.", sev:"ok", st:"Sẵn sàng đồng bộ"},
+  baochi:{kq:"Phê duyệt kế hoạch lựa chọn nhà thầu 03 gói: tư vấn lập Báo cáo kinh tế - kỹ thuật 288,5 triệu đồng; thẩm tra 17,4582 triệu đồng; thẩm định giá 90 triệu đồng. Đến 26/8/2026 đã tiếp nhận hồ sơ các đơn vị tư vấn, đang hoàn thiện hợp đồng (27 – 28/8/2026). Đã rà soát cấu trúc CSDL, các trường dữ liệu và khóa đối soát với C06; đang hoàn thiện phương án luồng kết nối, khai thác, đồng bộ dữ liệu.", dg:"Có chuyển biến ở khâu thủ tục và thiết kế kỹ thuật; phần chạy được vẫn chỉ là CSDL Thẻ nhà báo.", sev:"warn", st:"Chuẩn bị đầu tư"},
+  qcao:{kq:"Đã nhận văn bản góp ý thiết kế của C12; đã đăng ký tài nguyên trên nền tảng đám mây của TTDLQG. Hoàn thành Quyết định thành lập Hội đồng thẩm định dự án (QĐ số 318/QĐ-VHCSGĐTV). Đã chuyển sang giai đoạn thực hiện đầu tư; tháng 9/2026 lập hồ sơ mời thầu.", dg:"Bám sát tiến độ theo kế hoạch tại QĐ 1046/QĐ-BVHTTDL ngày 08/5/2026.", sev:"warn", st:"Thực hiện đầu tư"},
+  blgd:{kq:"Đã ký hợp đồng tư vấn triển khai xây dựng báo cáo kinh tế - kỹ thuật sau khi điều chỉnh phạm vi. Đã hoàn thiện phiếu khảo sát gửi các bộ, ngành.", dg:"Hoàn thành báo cáo trình Lãnh đạo Bộ tuần đầu tháng 9/2026.", sev:"warn", st:"Chậm"},
+  thethao:{kq:"Đang trình phê duyệt chủ trương đầu tư dự án “Xây dựng nền tảng số thể thao Việt Nam”. Đã đề xuất phương án triển khai thử nghiệm (POC) xây dựng CSDL Thành tích thể thao; dự kiến hoàn thành POC, đánh giá và báo cáo trước ngày 30/11/2026.", dg:"Chậm. Chưa được bố trí kinh phí do dự án đang trình phê duyệt; kiến nghị lùi hạn sang 12/2027.", sev:"bad", st:"Chậm"}
+ },
+ lg:{
+  hdv:{kq:"Đã hoàn thành đối soát hơn 47.883 hồ sơ: 40.733 thông tin đúng, 7.150 thông tin sai (dùng CMT cũ, sai giới tính). Đã hoàn thành dự thảo quy trình tạo lập, quản trị dữ liệu và phương án dịch chuyển dữ liệu về TTDLQG.", vm:"Đang hoàn thiện thủ tục để đồng bộ dữ liệu lên C12 và làm giàu dữ liệu cho C06."},
+  the:{kq:"Đã đối soát C06 thành công 2.009 hồ sơ; C06 đã mở dịch vụ 038. Ngày 14/8/2026 demo hệ thống và ký biên bản xác nhận dữ liệu đạt 4,5/5 điểm với 12.333 bản ghi.", vm:"Ngày 27/8/2026 C12 mới gửi đặc tả API và đề nghị rà soát danh mục trước kết nối."}
+ },
+ vm:[
+  {kk:"Dữ liệu đã làm sạch chưa được đồng bộ về TTDLQG. Đã ký biên bản đánh giá “Đúng - Đủ - Sạch - Sống” đạt 4,5/5 điểm ngày 14/8/2026, nhưng đến 27/8/2026 C12 mới gửi đặc tả API và đề nghị rà soát danh mục.", ca:"Hiện vật; Di sản văn hóa phi vật thể; Thẻ nhà báo", ng:"Chủ quan — Cục Di sản văn hóa, Cục Báo chí (theo báo cáo gốc)", hx:"Trung tâm Chuyển đổi số tiếp tục làm việc với C12 để thực hiện đồng bộ lên Trung tâm Dữ liệu quốc gia."},
+  {kk:"Chưa triển khai đối soát dữ liệu; đang trong quá trình lập kế hoạch lựa chọn nhà thầu chuẩn bị đầu tư", ca:"Đăng ký quyền tác giả, quyền liên quan", ng:"Chủ quan — Cục Bản quyền tác giả", hx:"Cục chủ động chuẩn bị dữ liệu và phương án đối soát, không chờ đủ thủ tục mới triển khai."}
+ ],
+ acts:[
+  {u:"Cục Bản quyền tác giả", li:["Hoàn thiện hồ sơ thầu, phối hợp đơn vị tư vấn hoàn thành thẩm định giá.","Hoàn thiện hồ sơ, thủ tục pháp lý làm cơ sở triển khai các bước tiếp theo.","Hoàn thành kết nối, chia sẻ dữ liệu với TTDLQG trước ngày 20/11/2026."]},
+  {u:"Cục Di sản văn hóa", li:["Đôn đốc, hướng dẫn các địa phương rà soát trùng lặp dữ liệu bằng công cụ chuyên dụng.","Phối hợp Trung tâm Chuyển đổi số và C12 đồng bộ dữ liệu chính thức lên TTDLQG.","Gửi kế hoạch và lộ trình chi tiết về Trung tâm Chuyển đổi số trước 15/9/2026, báo cáo trên theodoinq.dcs.vn."]},
+  {u:"Cục Báo chí", li:["Phối hợp Trung tâm Chuyển đổi số và C12 đồng bộ dữ liệu CSDL Thẻ nhà báo lên TTDLQG.","Gửi kế hoạch, lộ trình các CSDL còn lại trước 15/9/2026.","Hoàn thiện thủ tục lựa chọn nhà thầu, ký hợp đồng và triển khai 03 gói thầu chuẩn bị đầu tư."]},
+  {u:"Cục Văn hóa cơ sở, Gia đình và Thư viện", li:["CSDL Sản phẩm quảng cáo: lập hồ sơ mời thầu trong tháng 9/2026; kết nối, đồng bộ lên TTDLQG trước 20/11/2026.","CSDL Phòng, chống bạo lực gia đình: đẩy nhanh hoàn thiện Báo cáo kinh tế - kỹ thuật theo phạm vi điều chỉnh; đôn đốc các bộ, ngành phản hồi phiếu khảo sát."]},
+  {u:"Cục Thể dục thể thao Việt Nam", li:["Rà soát, hoàn thiện hồ sơ để sẵn sàng giải trình khi Lãnh đạo Bộ yêu cầu bổ sung.","Đẩy nhanh triển khai thử nghiệm (POC) xây dựng CSDL Thành tích thể thao.","Kiến nghị Lãnh đạo Bộ báo cáo Ban Chỉ đạo 57 cho phép gia hạn mốc hoàn thành đến tháng 12/2027."]}
+ ]
+}
+];
+
+/* Số liệu định lượng theo kỳ, dùng cho biểu đồ */
+var SERIES = [
+  {k:"Kỳ 1", clean:0,  hdv:10000, the:0},
+  {k:"Kỳ 2", clean:0,  hdv:10000, the:0},
+  {k:"Kỳ 3", clean:0,  hdv:10000, the:0},
+  {k:"Kỳ 4", clean:0,  hdv:10000, the:20},
+  {k:"Kỳ 5", clean:0,  hdv:10000, the:20},
+  {k:"Kỳ 6", clean:61205, hdv:10000, the:29},
+  {k:"Kỳ 7", clean:1846,  hdv:20000, the:96},
+  {k:"Kỳ 8", clean:14280, hdv:47883, the:2009}
+];
+var SERIES_NOTE = "Kỳ 6 gồm 61.205 bản ghi được xác nhận tại Biên bản ngày 14/8/2026 (Hiện vật 60.974 và Di sản phi vật thể 231); kỳ 7 và kỳ 8 là khối lượng các Sở xử lý trong tuần.";
+
+var MILESTONES = [
+  {d:"10/7/2026", p:0, t:"Trung tâm ban hành <b>Công văn số 911/CĐSVHTTDL-HTSATTT</b> đôn đốc tiến độ nhiệm vụ CSDL (lần 2)."},
+  {d:"14/7/2026", p:0, t:"Cục Bản quyền tác giả trình <b>Tờ trình số 06/TTr-BQTG</b> xin chủ trương chuẩn hóa dữ liệu và xây dựng phần mềm kết nối TTDLQG."},
+  {d:"15/7/2026", p:1, t:"<b>C06 tạm khóa dịch vụ đối soát</b> do vượt ngưỡng truy vấn — toàn bộ công tác làm sạch dừng lại."},
+  {d:"22/7/2026", p:2, t:"Trung tâm có <b>Công văn số 971/CĐSVHTTDL-HTSATTT</b> gửi Bộ Công an giải trình, đề nghị mở lại dịch vụ và nâng ngưỡng truy vấn."},
+  {d:"29/7/2026", p:3, t:"Cục Di sản văn hóa đưa <b>công cụ phát hiện dữ liệu trùng lặp</b> vào thử nghiệm tại Cục."},
+  {d:"01/8/2026", p:3, t:"Bộ Công an <b>mở lại quyền truy vấn</b> nhưng chưa nâng hạn mức theo đề nghị."},
+  {d:"07/8/2026", p:5, t:"Phê duyệt chủ trương và dự toán nhiệm vụ chuẩn hóa dữ liệu quyền tác giả tại <b>Quyết định số 2060/QĐ-BVHTTDL</b>."},
+  {d:"12/8/2026", p:5, t:"Trung tâm có <b>Công văn số 1114/CĐSVHTTDL-HTSATTT</b> đề nghị nâng hạn mức truy vấn dịch vụ 038 (lần 2)."},
+  {d:"14/8/2026", p:5, t:"<b>Họp với C12:</b> Hiện vật, Di sản phi vật thể và Thẻ nhà báo demo hệ thống, ký Biên bản xác nhận “Đúng - Đủ - Sạch - Sống” đạt <b>4,5/5 điểm</b>. Cục Bản quyền tác giả vắng mặt. Cùng ngày, phê duyệt điều chỉnh chủ trương CSDL Cơ quan báo chí tại <b>Quyết định số 2131/QĐ-BVHTTDL</b>."},
+  {d:"20/8/2026", p:6, t:"Mốc ấn định các Sở hoàn thành chuẩn hóa dữ liệu địa danh hành chính và dữ liệu cá nhân."},
+  {d:"21/8/2026", p:6, t:"Thứ trưởng Hoàng Đạo Cương nhất trí Báo cáo đề xuất chủ trương đầu tư dự án Nền tảng số thể thao Việt Nam."},
+  {d:"~22/8/2026", p:6, t:"<b>C06 nâng ngưỡng truy vấn</b> cho Bộ lên 10.000 lượt/ngày — gỡ nút thắt kéo dài từ 15/7."},
+  {d:"21/8/2026", p:7, t:"Cục Bản quyền tác giả ký hợp đồng tư vấn thẩm định giá và gửi <b>Công văn số 801/CV-BQTG</b>."},
+  {d:"27/8/2026", p:7, t:"<b>C12 gửi đặc tả API</b> và đề nghị các đơn vị rà soát danh mục trước khi kết nối."},
+  {d:"20/11/2026", p:-1, t:"Hạn kết nối, đồng bộ dữ liệu lên TTDLQG theo yêu cầu của Trung tâm Chuyển đổi số."},
+  {d:"30/11/2026", p:-1, t:"<b>Hạn hoàn thành 04 CSDL nhóm 2</b> theo Nghị quyết số 11/NQ-CP và Kế hoạch 100 ngày của Bộ."}
+];
+
+/* ---------- RENDER ---------- */
+var cur = P.length - 1;
+var $ = function(id){ return document.getElementById(id); };
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function fmt(n){ return n.toLocaleString("vi-VN"); }
+
+function markCell(ch){
+  if(ch==="y") return '<i class="mk mk-y">✓</i>';
+  if(ch==="p") return '<i class="mk mk-p">◐</i>';
+  if(ch==="x") return '<i class="mk mk-na">–</i>';
+  return '<i class="mk mk-n">✕</i>';
+}
+function counts(key){
+  var s = MX[key], y=0,p=0,x=0;
+  for(var i=0;i<s.length;i++){ if(s[i]==="y")y++; else if(s[i]==="p")p++; else if(s[i]==="x")x++; }
+  return {y:y,p:p,x:x,n:19-y-p-x};
+}
+
+function buildPeriodSelect(){
+  var sel = $("periodSel");
+  sel.innerHTML = P.map(function(p,i){
+    return '<option value="'+i+'">'+esc(p.name)+' · '+esc(p.range)+'</option>';
+  }).join("");
+  sel.value = cur;
+}
+
+function renderCard(key, d){
+  var c = counts(key);
+  var pct = Math.round(c.y/19*100);
+  var wy = c.y/19*100, wp = c.p/19*100;
+  return '<article class="c sev-'+d.sev+'">'+
+    '<div class="c-h"><div class="nm"><div class="t">'+esc(NAMES[key])+'</div>'+
+      '<div class="u">'+esc(UNITS[key])+'</div></div>'+
+      '<span class="pill p-'+d.sev+'">'+esc(d.st)+'</span></div>'+
+    '<div class="c-b">'+
+      '<div class="meter"><div class="mr"><span>Tiêu chí đạt</span>'+
+        '<span class="v">'+c.y+'/19 · '+pct+'%</span></div>'+
+        '<div class="track"><i class="f-ok" style="width:'+wy+'%"></i><i class="f-ds" style="width:'+wp+'%"></i></div></div>'+
+      '<div class="fld"><span class="k">Kết quả trong kỳ</span><span class="v">'+d.kq+'</span></div>'+
+      '<div class="fld"><span class="k">Đánh giá</span><span class="v">'+d.dg+'</span></div>'+
+    '</div>'+
+    '<div class="c-f"><span>Đang đối soát: <b>'+c.p+'</b></span><span>Chưa đạt: <b>'+c.n+'</b></span>'+
+      (c.x?'<span>Không yêu cầu: <b>'+c.x+'</b></span>':'')+'</div>'+
+  '</article>';
+}
+
+function renderGroups(p){
+  var h = "";
+  h += '<div class="grp"><div class="grp-h"><span class="tagn">NHÓM 1</span>'+
+    '<span class="gt">03 CSDL đến hạn 31/12/2025 — yêu cầu làm sạch dữ liệu để kết nối chính thức với C12</span>'+
+    '<span class="gd">Đã quá hạn</span></div><div class="cards">'+
+    G1.map(function(k){ return renderCard(k, p.csdl[k]); }).join("")+'</div></div>';
+  h += '<div class="grp"><div class="grp-h"><span class="tagn">NHÓM 2</span>'+
+    '<span class="gt">04 CSDL đến hạn 30/11/2026 — yêu cầu có sản phẩm chạy được và dữ liệu sạch</span>'+
+    '<span class="gd">Còn '+esc(p.conlai)+'</span></div><div class="cards">'+
+    G2.map(function(k){ return renderCard(k, p.csdl[k]); }).join("")+'</div></div>';
+  $("groups").innerHTML = h;
+}
+
+function renderMatrix(){
+  var head = '<thead><tr><th class="rowh">Cơ sở dữ liệu</th>'+
+    CRIT.map(function(c,i){ return '<th title="'+esc(c)+'"><span class="num">'+(i+1)+'</span>'+esc(c.length>26?c.slice(0,25)+"…":c)+'</th>'; }).join("")+
+    '<th class="score">Đạt</th></tr></thead>';
+  var keys = G1.concat(G2);
+  var body = '<tbody>'+keys.map(function(k){
+    var s = MX[k], c = counts(k);
+    return '<tr><td class="rowh">'+esc(NAMES[k])+'</td>'+
+      s.split("").map(function(ch){ return "<td>"+markCell(ch)+"</td>"; }).join("")+
+      '<td class="score">'+c.y+'/19</td></tr>';
+  }).join("")+'</tbody>';
+  $("mx").innerHTML = head + body;
+}
+
+function renderLG(p){
+  var rows = [
+    {key:"hdv", n:"Hướng dẫn viên du lịch", u:"Cục Du lịch Quốc gia Việt Nam", d:p.lg.hdv},
+    {key:"the", n:"Thẻ nhà báo", u:"Cục Báo chí", d:p.lg.the}
+  ];
+  $("lgCards").innerHTML = rows.map(function(r){
+    return '<article class="c sev-warn"><div class="c-h"><div class="nm">'+
+      '<div class="t">'+esc(r.n)+'</div><div class="u">'+esc(r.u)+'</div></div>'+
+      '<span class="pill p-warn">Làm giàu C06</span></div>'+
+      '<div class="c-b"><div class="fld"><span class="k">Kết quả đối soát</span><span class="v">'+r.d.kq+'</span></div>'+
+      '<div class="fld"><span class="k">Vướng mắc</span><span class="v">'+r.d.vm+'</span></div></div></article>';
+  }).join("");
+
+  var last = SERIES[SERIES.length-1];
+  $("lgTable").innerHTML = '<thead><tr><th>Kỳ báo cáo</th><th>Hướng dẫn viên du lịch</th>'+
+    '<th>Thẻ nhà báo</th><th>Bản ghi di sản xử lý trong kỳ</th></tr></thead><tbody>'+
+    SERIES.map(function(s,i){
+      var on = (i===cur) ? ' style="background:var(--gold-soft)"' : '';
+      return '<tr'+on+'><td><b>'+esc(s.k)+'</b> · '+esc(P[i].range)+'</td>'+
+        '<td class="num">'+(s.hdv?fmt(s.hdv)+(i<5?"+":""):"—")+'</td>'+
+        '<td class="num">'+(s.the?fmt(s.the):"—")+'</td>'+
+        '<td class="num">'+(s.clean?fmt(s.clean):"—")+'</td></tr>';
+    }).join("")+'</tbody>';
+}
+
+function bars(data, max, colorVar, unit){
+  return '<div style="display:flex;flex-direction:column;gap:9px">'+data.map(function(d,i){
+    var w = max ? Math.max(d.v/max*100, d.v>0?1.5:0) : 0;
+    var on = (i===cur);
+    return '<div style="display:grid;grid-template-columns:44px 1fr 78px;gap:10px;align-items:center">'+
+      '<span style="font-size:11.5px;color:var(--ink-'+(on?"2":"3")+');font-weight:'+(on?700:500)+'">'+esc(d.k)+'</span>'+
+      '<span style="height:14px;background:var(--surface-3);border-radius:3px;overflow:hidden;display:block">'+
+        '<i style="display:block;height:100%;width:'+w+'%;background:var('+colorVar+');opacity:'+(on?1:.62)+';border-radius:3px"></i></span>'+
+      '<span class="mono" style="font-size:12px;text-align:right;color:var(--ink'+(on?"":"-2")+');font-weight:'+(on?600:500)+'">'+
+        (d.v?fmt(d.v):"—")+'</span></div>';
+  }).join("")+'</div>';
+}
+
+function renderCharts(){
+  var maxC = Math.max.apply(null, SERIES.map(function(s){return s.clean;}));
+  $("chartClean").innerHTML = bars(SERIES.map(function(s){return {k:s.k, v:s.clean};}), maxC, "--ok") +
+    '<p class="note" style="margin-top:14px">'+esc(SERIES_NOTE)+'</p>';
+
+  var maxR = Math.max.apply(null, SERIES.map(function(s){return s.hdv+s.the;}));
+  $("chartRecon").innerHTML =
+    '<div style="font-size:11px;color:var(--ink-3);margin-bottom:9px;display:flex;gap:14px">'+
+      '<span><i style="display:inline-block;width:9px;height:9px;border-radius:2px;background:var(--navy);vertical-align:baseline"></i> Hướng dẫn viên du lịch</span>'+
+      '<span><i style="display:inline-block;width:9px;height:9px;border-radius:2px;background:var(--gold);vertical-align:baseline"></i> Thẻ nhà báo</span></div>'+
+    '<div style="display:flex;flex-direction:column;gap:9px">'+SERIES.map(function(s,i){
+      var on=(i===cur), w1=s.hdv/maxR*100, w2=s.the/maxR*100;
+      return '<div style="display:grid;grid-template-columns:44px 1fr 88px;gap:10px;align-items:center">'+
+        '<span style="font-size:11.5px;color:var(--ink-'+(on?"2":"3")+');font-weight:'+(on?700:500)+'">'+esc(s.k)+'</span>'+
+        '<span style="height:14px;background:var(--surface-3);border-radius:3px;overflow:hidden;display:flex">'+
+          '<i style="height:100%;width:'+w1+'%;background:var(--navy);opacity:'+(on?1:.62)+'"></i>'+
+          '<i style="height:100%;width:'+Math.max(w2,s.the?1:0)+'%;background:var(--gold);opacity:'+(on?1:.62)+'"></i></span>'+
+        '<span class="mono" style="font-size:12px;text-align:right;color:var(--ink'+(on?"":"-2")+');font-weight:'+(on?600:500)+'">'+
+          fmt(s.hdv+s.the)+'</span></div>';
+    }).join("")+'</div>'+
+    '<p class="note" style="margin-top:14px">Kỳ 1 – 5 giữ mức “hơn 10.000 hồ sơ” theo nguyên văn báo cáo; C06 khóa dịch vụ từ 15/7/2026 và chỉ nâng hạn mức lên 10.000 lượt/ngày ở kỳ 7.</p>';
+}
+
+function renderTimeline(){
+  $("tl").innerHTML = MILESTONES.map(function(m){
+    var on = (m.p===cur);
+    return '<div class="tl-row'+(on?" on":"")+'"><div class="tl-d">'+esc(m.d)+
+      (m.p>=0?'<b>'+esc(P[m.p].name)+'</b>':'<b>Mốc hạn</b>')+'</div>'+
+      '<div class="tl-t">'+m.t+'</div></div>';
+  }).join("");
+}
+
+function renderVM(p){
+  $("vmTable").innerHTML = '<thead><tr><th style="width:32%">Khó khăn, vướng mắc</th>'+
+    '<th style="width:20%">CSDL bị ảnh hưởng</th><th style="width:20%">Nguyên nhân, trách nhiệm</th>'+
+    '<th style="width:28%">Hướng xử lý</th></tr></thead><tbody>'+
+    p.vm.map(function(v){
+      return '<tr><td><b>'+v.kk+'</b></td><td>'+esc(v.ca)+'</td><td>'+esc(v.ng)+'</td><td>'+esc(v.hx)+'</td></tr>';
+    }).join("")+'</tbody>';
+  $("blkCnt").textContent = p.vm.length + " vướng mắc trong kỳ";
+  $("vmHint").textContent = p.name + " · " + p.range;
+}
+
+function renderFlow(p){
+  var isLate = cur >= 5;
+  var steps = [
+    {st:"Bước 1", t:"CSDL ngành VHTTDL", s:"07 CSDL đã chuẩn hóa hoặc đang xây dựng", cls:"done"},
+    {st:"Bước 2", t:"Đối soát, làm sạch với C06", s:"Họ tên · Số định danh · Ngày sinh", cls: isLate ? "done" : "block"},
+    {st:"Bước 3", t:"Ký biên bản “Đúng - Đủ - Sạch - Sống”", s: isLate ? "Đã ký 14/8/2026, đạt 4,5/5 điểm" : "Chưa thực hiện", cls: isLate ? "done" : "wait"},
+    {st:"Bước 4", t:"Đồng bộ chính thức lên C12", s: isLate ? "C12 gửi đặc tả API ngày 27/8/2026 — đang rà soát danh mục" : "Chưa kết nối", cls:"block"}
+  ];
+  $("flow").innerHTML = steps.map(function(s,i){
+    return (i? '<div class="farr">→</div>' : '') +
+      '<div class="fstep"><div class="fbox '+s.cls+'"><span class="st">'+esc(s.st)+'</span>'+
+      '<span class="ft">'+esc(s.t)+'</span><span class="fs">'+esc(s.s)+'</span></div></div>';
+  }).join("");
+  $("flowSub").textContent = isLate
+    ? "Nút thắt đã dịch chuyển từ khâu đối soát với C06 sang khâu đồng bộ chính thức lên Trung tâm Dữ liệu quốc gia."
+    : "Nút thắt của toàn tuyến nằm ở Bước 2 — dịch vụ đối soát với CSDL quốc gia về dân cư bị tạm khóa.";
+}
+
+function renderActs(p){
+  $("acts").innerHTML = p.acts.map(function(a){
+    return '<div class="act"><h4>'+esc(a.u)+'</h4><ul>'+
+      a.li.map(function(x){ return "<li>"+esc(x)+"</li>"; }).join("")+'</ul></div>';
+  }).join("");
+  $("tdHint").textContent = p.name + " · " + p.range;
+}
+
+function renderFin(){
+  $("finTable").innerHTML = '<thead><tr><th>Cơ sở dữ liệu</th><th style="text-align:right">Đã cấp</th>'+
+    '<th style="text-align:right">Tổng mức</th><th>Ghi chú</th></tr></thead><tbody>'+
+    FIN.map(function(f){
+      return '<tr><td><b>'+esc(NAMES[f.k])+'</b></td><td class="num">'+esc(f.capho)+'</td>'+
+        '<td class="num">'+esc(f.tong)+'</td><td>'+esc(f.note)+'</td></tr>';
+    }).join("")+'</tbody>';
+  $("infra").innerHTML = INFRA.map(function(x){
+    return '<div style="padding:9px 0;border-top:1px solid var(--line)">'+
+      '<div style="font-size:12.5px;font-weight:600">'+esc(NAMES[x.k])+'</div>'+
+      '<div style="font-size:12.5px;color:var(--ink-2);line-height:1.5;margin-top:2px">'+esc(x.v)+'</div></div>';
+  }).join("").replace('border-top:1px solid var(--line)','border-top:none');
+}
+
+function renderKPI(p){
+  var totY=0, totP=0;
+  Object.keys(MX).forEach(function(k){ var c=counts(k); totY+=c.y; totP+=c.p; });
+  var items = [
+    {n:p.ketnoi+'<small>/07</small>', l:"CSDL kết nối chính thức với C12", s:"Chưa CSDL nào đồng bộ lên môi trường thật", cls:"t-bad"},
+    {n:p.chuyenbien, l:"CSDL có chuyển biến trong kỳ", s:p.chuyenbienNote, cls:"t-navy"},
+    {n:"03<small>/07</small>", l:"CSDL đã quá hạn 31/12/2025", s:"Quá hạn "+(cur>=6?"08":"07")+" tháng tính đến kỳ này", cls:"t-bad"},
+    {n:p.conlai, l:"Thời gian còn lại của nhóm 2", s:"Đến hạn 30/11/2026", cls:"t-warn"},
+    {n:p.kpiExtra.clean, l:"Bản ghi di sản xử lý trong kỳ", s:"Làm sạch, chuẩn hóa tại các Sở", cls:"t-ok"}
+  ];
+  $("kpis").innerHTML = items.map(function(i){
+    return '<div class="kpi"><div class="n '+i.cls+'">'+i.n+'</div><div class="l">'+esc(i.l)+
+      '</div><div class="s">'+esc(i.s)+'</div></div>';
+  }).join("");
+}
+
+function render(){
+  var p = P[cur];
+  $("periodSel").value = cur;
+  $("btnPrev").disabled = (cur===0);
+  $("btnNext").disabled = (cur===P.length-1);
+  $("ribName").textContent = p.name;
+  $("ribRange").textContent = p.range;
+  $("ribSrc").textContent = "Nguồn: " + p.src;
+  $("leadDyn").innerHTML = "<b>Hiện trạng " + esc(p.name.toLowerCase()) + " (" + esc(p.range) + "):</b> " + p.lead;
+  $("dsHint").textContent = p.name + " · số tiêu chí đạt trên 19";
+  renderKPI(p);
+  renderGroups(p);
+  renderLG(p);
+  renderVM(p);
+  renderFlow(p);
+  renderActs(p);
+  renderCharts();
+  renderTimeline();
+}
+
+function init(){
+  buildPeriodSelect();
+  renderMatrix();
+  renderFin();
+  $("mxNote").innerHTML = "Ma trận phản ánh <b>hiện trạng đến kỳ 8 (28/8/2026)</b>. Các báo cáo tuần mô tả tiến độ theo diễn biến công việc, không chấm lại từng tiêu chí theo từng kỳ, nên chuyên trang không suy diễn điểm số cho các kỳ trước. Tỷ lệ hoàn thành = số tiêu chí đạt trên 19 theo cách chấm của C12; trạng thái “đang đối soát” và “không yêu cầu” không tính là đạt.";
+  $("periodSel").addEventListener("change", function(){ cur = parseInt(this.value,10); render(); });
+  $("btnPrev").addEventListener("click", function(){ if(cur>0){ cur--; render(); } });
+  $("btnNext").addEventListener("click", function(){ if(cur<P.length-1){ cur++; render(); } });
+  render();
+}
+init();
+</script>
+
+</body>
+</html>
